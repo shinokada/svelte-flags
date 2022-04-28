@@ -1,6 +1,6 @@
 # Svelte-flags
 
-Svelte components for [Country-flags](https://github.com/hampusborgos/country-flags).
+[Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
 
 ## Installation
 
