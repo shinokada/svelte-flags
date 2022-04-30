@@ -1,5 +1,5 @@
 <script>
-  import Us from "./us.svelte";
+  import { Us } from "$lib/index";
 </script>
 
 <Us />

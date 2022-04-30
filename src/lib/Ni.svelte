@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 600">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 600">
 <defs>
 <linearGradient id="cap1" gradientUnits="userSpaceOnUse" x1="498.738" y1="289.055" x2="500.626" y2="283.42">
 <stop stop-color="#510000" offset="0"/>

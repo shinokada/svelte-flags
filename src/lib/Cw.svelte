@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54 36">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54 36">
 <rect width="54" height="36" fill="#002b7f"/>
 <path d="M0,22.5H54V27H0z" fill="#f9e814"/>
 <g fill="#fff" id="s">

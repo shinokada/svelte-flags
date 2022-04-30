@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 600">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 600">
 <defs>
 <radialGradient id="a">
 <stop stop-color="#f9f0aa" offset=".22"/>

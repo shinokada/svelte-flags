@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18">
 <title>Flag of The Gambia</title>
 <path d="m0,0h27v18H0" fill="#3A7728"/>
 <path d="m0,0h27v11H0" fill="#0C1C8C"/>

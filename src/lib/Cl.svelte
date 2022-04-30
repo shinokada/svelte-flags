@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4 -4 24 16">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4 -4 24 16">
 <path d="M20,12H-4V-4H20z" fill="#d52b1e"/>
 <path d="M4,4H20V-4H-4z" fill="#fff"/>
 <path d="M4,4H-4V-4H4z" fill="#0039a6"/>

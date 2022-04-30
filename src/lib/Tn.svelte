@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="-60 -40 120 80">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" viewBox="-60 -40 120 80">
 <g fill="#E70013">
 <rect x="-60" y="-40" width="120" height="80"/>
 <circle fill="#FFF" r="20"/>

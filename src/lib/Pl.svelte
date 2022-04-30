@@ -1,1 +1,1 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><path fill="#fff" d="M0 0h16v10H0z"/><path fill="#dc143c" d="M0 5h16v5H0z"/></svg>
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><path fill="#fff" d="M0 0h16v10H0z"/><path fill="#dc143c" d="M0 5h16v5H0z"/></svg>

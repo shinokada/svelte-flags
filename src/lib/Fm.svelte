@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-19 -10 38 20">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-19 -10 38 20">
 <rect x="-19" y="-10" width="38" height="20" fill="#75b2dd"/>
 <g id="star" transform="translate(0,-6)" fill="#fff">
 <g id="c">
