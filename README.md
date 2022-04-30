@@ -79,4 +79,4 @@ All the credits goes to [country-flags](https://github.com/hampusborgos/country-
 - [Svelte-heros](https://github.com/shinokada/svelte-heros)
 - [Svelte-lucide](https://github.com/shinokada/svelte-lucide)
 - [Svlete-simples](https://github.com/shinokada/svelte-simples)
-- [Svelte-feathericons](https://github.com/shinokada/svelte-feathericons)
+- [Svelte-feathers](https://github.com/shinokada/svelte-feathers)
