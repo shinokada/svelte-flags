@@ -8,11 +8,15 @@
 npm i -D svelte-flags
 ```
 
-## How to use it
+## Size
+
+Use the `size` prop to change the flag sizes.
+
+[REPL](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
 
 ```html
 <script>
-  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from "$lib/index";
+  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from "svelte-flags";
 </script>
 
 <div>
@@ -26,6 +30,27 @@ npm i -D svelte-flags
   <Ch size="200" />
   <Cz size="200" />
 </div>
+```
+
+## Tailwind CSS support
+
+[REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9?version=3.47.0)
+
+You can change size and other CSS using Tailwind and the `class` prop.
+
+```html
+<Us class="rounded-full bg-white h-40 w-40 ring-2 rring-gray-300 m-4" />
+```
+
+Or you can use `size` and `class` props together.
+
+```html
+Tailwind CSS
+<Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
+Tailwind CSS + Size
+<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150"/>
+Tailwind CSS + size null
+<Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size />
 ```
 
 ## Svlete Icon Names
