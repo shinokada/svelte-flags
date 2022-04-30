@@ -1,5 +1,9 @@
 # Svelte-flags
 
+[![npm version](https://badgen.net/npm/v/svelte-flags)](https://www.npmjs.com/package/svelte-flags)
+[![license](https://badgen.net/npm/license/svelte-flags)](https://github.com/shinokada/svelte-flags/blob/main/LICENSE)
+[![license](https://badgen.net/npm/dm/svelte-flags)](https://github.com/shinokada/svelte-flags)
+
 [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
 
 <p align="center">
