@@ -2,7 +2,9 @@
 
 [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
 
+<p align="center">
 <img width="500" src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag1.png" />
+</p>
 
 ## Installation
 
@@ -36,7 +38,9 @@ Use the `size` prop to change the flag sizes.
 
 ## Tailwind CSS support
 
-<img width="100" src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
+<p align="center">
+<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
+</p>
 
 [REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9?version=3.47.0)
 
