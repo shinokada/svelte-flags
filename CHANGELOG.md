@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/shinokada/svelte-flags/compare/v0.1.1...v0.2.0) (2022-04-30)
+
+
+### Features
+
+* add 91765restProps ([773bb5b](https://github.com/shinokada/svelte-flags/commit/773bb5bcbf5ff77edc7a2d3872129c577ffc3852))
+
 ### [0.1.1](https://github.com/shinokada/svelte-flags/compare/v0.1.0...v0.1.1) (2022-04-28)
 
 ## 0.1.0 (2022-04-28)
