@@ -20,7 +20,8 @@ npm i -D svelte-flags
 
 Use the `size` prop to change the flag sizes.
 
-[REPL](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
+- [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
+- [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
 
 ```html
 <script>
