@@ -7,9 +7,6 @@
 [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag1.png" />
-</p>
-<p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
 </p>
 
