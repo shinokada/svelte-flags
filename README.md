@@ -9,6 +9,9 @@
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag1.png" />
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
+</p>
 
 ## Installation
 
@@ -44,7 +47,7 @@ Use the `size` prop to change the flag sizes.
 ## Tailwind CSS support
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
+<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
 </p>
 
 [REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9?version=3.47.0)
