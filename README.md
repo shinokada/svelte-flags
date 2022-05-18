@@ -89,9 +89,14 @@ Bootstrap example:
 
 All the credits goes to [country-flags](https://github.com/hampusborgos/country-flags)
 
+
 ## Other icons
 
+- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+- [Svelte-Ionicons](https://www.npmjs.com/package/svelte-ionicons)
+- [Svelte-Awesome-Icons](https://www.npmjs.com/package/svelte-awesome-icons)
 - [Svelte-heros](https://github.com/shinokada/svelte-heros)
 - [Svelte-lucide](https://github.com/shinokada/svelte-lucide)
+- [Svelte-flags](https://www.npmjs.com/package/svelte-flags)
 - [Svlete-simples](https://github.com/shinokada/svelte-simples)
 - [Svelte-feathers](https://github.com/shinokada/svelte-feathers)
