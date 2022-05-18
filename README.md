@@ -4,7 +4,9 @@
 [![license](https://badgen.net/npm/license/svelte-flags)](https://github.com/shinokada/svelte-flags/blob/main/LICENSE)
 [![downloads](https://badgen.net/npm/dm/svelte-flags)](https://github.com/shinokada/svelte-flags)
 
-[Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
+- [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
+- Major CSS frameworks support
+
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
@@ -41,7 +43,7 @@ Use the `size` prop to change the flag sizes.
 </div>
 ```
 
-## Tailwind CSS support
+## CSS frameworks support
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
@@ -49,7 +51,9 @@ Use the `size` prop to change the flag sizes.
 
 [REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9?version=3.47.0)
 
-You can change size and other CSS using Tailwind and the `class` prop.
+You can change size and other CSS using the `class` prop.
+
+Tailwind CSS example:
 
 ```html
 <Us class="rounded-full bg-white h-40 w-40 ring-2 rring-gray-300 m-4" />
@@ -63,7 +67,13 @@ Tailwind CSS
 Tailwind CSS + Size
 <Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150"/>
 Tailwind CSS + size null
-<Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size />
+<Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size="150" />
+```
+
+Bootstrap example:
+
+```html
+<Us class="position-absolute top-0 px-1" />
 ```
 
 ## Svlete Icon Names
