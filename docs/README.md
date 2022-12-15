@@ -1,16 +1,21 @@
-# Svelte-flags
+<h1 align="center">Svelte-Flags</h1>
 
-[![npm version](https://badgen.net/npm/v/svelte-flags)](https://www.npmjs.com/package/svelte-flags)
-[![license](https://badgen.net/npm/license/svelte-flags)](https://github.com/shinokada/svelte-flags/blob/main/LICENSE)
-[![downloads](https://badgen.net/npm/dm/svelte-flags)](https://github.com/shinokada/svelte-flags)
+<p align="center">
+<a href="https://shinokada.github.io/svelte-flags/">Svelte-Flags</a>
+</p>
 
-- [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
-- Major CSS frameworks support
-
+<p align="center">
+<a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-flags" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flags" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-flags.svg" alt="npm"></a>
+</p>
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
 </p>
+
+250+ [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
 
 ## Installation
 
@@ -76,9 +81,9 @@ Bootstrap example:
 <Us class="position-absolute top-0 px-1" />
 ```
 
-## Svlete Icon Names
+## Icon Names
 
-[Icon list](https://github.com/shinokada/svelte-flags/blob/main/flags.md)
+[Icon list](https://github.com/shinokada/svelte-flags/blob/main/docs/flags.md)
 
 ## ISO 3166 Country Codes
 
@@ -93,10 +98,3 @@ All the credits goes to [country-flags](https://github.com/hampusborgos/country-
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-- [Svelte-Ionicons](https://www.npmjs.com/package/svelte-ionicons)
-- [Svelte-Awesome-Icons](https://www.npmjs.com/package/svelte-awesome-icons)
-- [Svelte-heros](https://github.com/shinokada/svelte-heros)
-- [Svelte-lucide](https://github.com/shinokada/svelte-lucide)
-- [Svelte-flags](https://www.npmjs.com/package/svelte-flags)
-- [Svlete-simples](https://github.com/shinokada/svelte-simples)
-- [Svelte-feathers](https://github.com/shinokada/svelte-feathers)
