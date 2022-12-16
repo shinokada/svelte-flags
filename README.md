@@ -54,7 +54,7 @@ Use the `size` prop to change the flag sizes.
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
 </p>
 
-[REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9?version=3.47.0)
+[REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9)
 
 You can change size and other CSS using the `class` prop.
 
