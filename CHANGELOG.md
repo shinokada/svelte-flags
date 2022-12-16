@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/shinokada/svelte-flags/compare/v0.2.6...v0.2.7) (2022-12-16)
+
+
+### Bug Fixes
+
+* move files from docs to root since npmjs does not show README. Update sveltekit ([da5bb5c](https://github.com/shinokada/svelte-flags/commit/da5bb5c1c616da9b18dd5f1a5bd324500012436f))
+
 ### [0.2.6](https://github.com/shinokada/svelte-flags/compare/v0.2.5...v0.2.6) (2022-12-15)
 
 
