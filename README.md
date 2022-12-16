@@ -7,7 +7,7 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-flags" alt="npm"></a>
 <a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
-<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flags" alt="License"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flags" alt="License"></a>
 <a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-flags.svg" alt="npm"></a>
 </p>
 
@@ -27,8 +27,8 @@ npm i -D svelte-flags
 
 Use the `size` prop to change the flag sizes.
 
-- [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
-- [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd?version=3.47.0)
+- [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
+- [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 
 ```html
 <script>
@@ -83,7 +83,7 @@ Bootstrap example:
 
 ## Icon Names
 
-[Icon list](https://github.com/shinokada/svelte-flags/blob/main/docs/flags.md)
+[Icon list](https://github.com/shinokada/svelte-flags/blob/main/flags.md)
 
 ## ISO 3166 Country Codes
 
