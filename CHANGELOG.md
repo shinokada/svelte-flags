@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/shinokada/svelte-flags/compare/v0.2.8...v0.2.9) (2022-12-25)
+
+
+### Bug Fixes
+
+* url updates ([b7f0a61](https://github.com/shinokada/svelte-flags/commit/b7f0a61649953489c744aaee1f3b20c19182a93e))
+
 ### [0.2.8](https://github.com/shinokada/svelte-flags/compare/v0.2.7...v0.2.8) (2022-12-16)
 
 
