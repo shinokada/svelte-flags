@@ -84,7 +84,7 @@ Bootstrap example:
 
 ## Icon Names
 
-[Icon list](https://github.com/shinokada/svelte-flags/blob/main/flags.md)
+[Icon list](/flags.md)
 
 ## ISO 3166 Country Codes
 
