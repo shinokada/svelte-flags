@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/shinokada/svelte-flags/compare/v0.2.9...v0.2.10) (2023-01-30)
+
+
+### Features
+
+* add pwa ([1de4270](https://github.com/shinokada/svelte-flags/commit/1de42702f6d7438a5347f4e77ae03dbd20f5e93e))
+
 ### [0.2.9](https://github.com/shinokada/svelte-flags/compare/v0.2.8...v0.2.9) (2022-12-25)
 
 
