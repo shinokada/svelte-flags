@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag3.png" />
+<img src="/static/images/flags-optimized.png" width="650" />
 </p>
 
 250+ [Country-flags](https://github.com/hampusborgos/country-flags) Svelte components.
