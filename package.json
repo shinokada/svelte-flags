@@ -1,6 +1,6 @@
 {
 	"name": "svelte-flags",
-	"version": "0.2.12",
+	"version": "0.2.13",
 	"description": "Country flag icon components for Sveltejs",
 	"author": {
 		"name": "Shinichi Okada",

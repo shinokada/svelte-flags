@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/shinokada/svelte-flags/compare/v0.2.12...v0.2.13) (2023-02-01)
+
+
+### Bug Fixes
+
+* badges target, height, and add links to crossOriginLinks ([c517d96](https://github.com/shinokada/svelte-flags/commit/c517d966922576d5952d22b5f32d6df91730cc90))
+
 ### [0.2.12](https://github.com/shinokada/svelte-flags/compare/v0.2.11...v0.2.12) (2023-02-01)
 
 
