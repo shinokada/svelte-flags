@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/shinokada/svelte-flags/compare/v0.2.13...v0.3.1) (2023-02-22)
+
+
+### Features
+
+* add microsoft webmaster tools meta tag ([0a7af94](https://github.com/shinokada/svelte-flags/commit/0a7af945fe0cece4deb3ab2411d586eb9da44e7a))
+
+
+### Bug Fixes
+
+* update index.html ([c1789d0](https://github.com/shinokada/svelte-flags/commit/c1789d0cc68d6aff42dfe064fd868e62003276bb))
+
 ### [0.2.13](https://github.com/shinokada/svelte-flags/compare/v0.2.12...v0.2.13) (2023-02-01)
 
 
