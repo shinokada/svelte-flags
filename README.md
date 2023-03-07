@@ -26,12 +26,56 @@
 npm i -D svelte-flags
 ```
 
-## Size
+## Usage
 
-Use the `size` prop to change the flag sizes.
+```html
+<script>
+  import { Us } from 'svelte-flags';
+</script>
+
+<Us />
+```
+
+## Faster compiling
+
+For faster compilation, you can import the icon directly.
+
+```html
+<script>
+  import Us from 'svelte-flags/Us.svelte';
+</script>
+
+<Us />
+```
+
+If you are TypeScript user, **this require `"typescript": "^5.0.0"`.**
+
+As of March 2023, the `typescript@beta` version is now available:
+
+```sh
+pnpm i -D typescript@beta
+```
+
+To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
+
+```json
+{
+  //...
+  "compilerOptions": {
+    // ...
+    "moduleResolution": "nodenext"
+  }
+}
+```
+
+## REPL
 
 - [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 - [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
+
+## Size
+
+Use the `size` prop to change the flag sizes.
 
 ```html
 <script>
@@ -82,6 +126,66 @@ Bootstrap example:
 
 ```html
 <Us class="position-absolute top-0 px-1" />
+```
+
+## Unfocusable icon
+
+If you want to make an icon unfocusable, add `tabindex="-1"`.
+
+```html
+<Us tabindex="-1" />
+```
+
+
+## Passing down other attributes
+
+You can pass other attibutes as well.
+
+```html
+<Us tabindex="0" />
+```
+
+## Using svelte:component
+
+```html
+<svelte:component this="{Us}" />
+```
+
+## Using onMount
+
+```html
+<script>
+  import { Us } from 'svelte-flags';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Us({ target: document.body, props });
+  });
+</script>
+```
+
+## Import all
+
+Use `import * as Icon from 'svelte-circle-flags`.
+
+
+```html
+<script>
+  import * as Icon from 'svelte-flags';
+</script>
+<h1>Size</h1>
+<Icon.Fr size="30" />
+<Icon.De size="40" />
+
+<h1>CSS HEX color</h1>
+<Icon.Dk color="#c61515" size="40" />
+
+<h1>Tailwind CSS</h1>
+<Icon.Jp class="text-blue-500" />
+<Icon.No class="text-pink-700" />
 ```
 
 ## Icon Names
