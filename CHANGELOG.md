@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/shinokada/svelte-flags/compare/v0.3.1...v0.4.1) (2023-03-07)
+
+
+### Features
+
+* add script add-exports and update README ([58b83e7](https://github.com/shinokada/svelte-flags/commit/58b83e7069ba18b4b9021a0381e6e0145fd4d999))
+
 ### [0.3.1](https://github.com/shinokada/svelte-flags/compare/v0.2.13...v0.3.1) (2023-02-22)
 
 
