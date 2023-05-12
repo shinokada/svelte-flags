@@ -1,4 +1,3 @@
-# Svelte flag names 
 - Ad.svelte
 - Ae.svelte
 - Af.svelte
@@ -254,7 +253,3 @@
 - Za.svelte
 - Zm.svelte
 - Zw.svelte
-
-## Back to Home
-
-[Back to Home](/)
