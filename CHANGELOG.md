@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/shinokada/svelte-flags/compare/v0.4.1...v0.4.2) (2023-05-12)
+
+
+### Features
+
+* add events ([ea71fbb](https://github.com/shinokada/svelte-flags/commit/ea71fbbfd556e470d2aaa1861e7020c6a800164c))
+
 ### [0.4.1](https://github.com/shinokada/svelte-flags/compare/v0.3.1...v0.4.1) (2023-03-07)
 
 
