@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 2400">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 2400">
 <title>Flag of Equatorial Guinea</title>
 <rect width="3600" height="2400" fill="#e32118"/>
 <rect width="3600" height="1600" fill="#fff"/>

@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="-17.582 -4.664 71.571 87.246">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="-17.582 -4.664 71.571 87.246">
 <title>Flag of Nepal</title>
 <desc>Coding according to the official construction in "Constitution of the Kingdom of Nepal, Article 5, Shedule 1", adopted in November 1990</desc>
 <use xlink:href="#b" stroke="#003893" stroke-width="5.1646754223"/>

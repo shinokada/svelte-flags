@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2">
 <rect width="1" height="2" fill="#ce1126"/>
 <rect width="1" height="2" x="1" fill="#fcd116"/>
 <rect width="1" height="2" x="2" fill="#009460"/>

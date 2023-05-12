@@ -1,4 +1,4 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 960">
+<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 960">
 <defs>
 <linearGradient id="d" y2="277.58" gradientUnits="userSpaceOnUse" x2="601.38" gradientTransform="matrix(1.14637 0 0 1.17117 33.18 82.14)" y1="342.3" x1="597.92">
 <stop stop-color="#fff" offset="0"/>
