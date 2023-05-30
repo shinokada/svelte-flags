@@ -1,4 +1,5 @@
-# Svelte flag names 
+# Svelte flag names
+
 - Ad.svelte
 - Ae.svelte
 - Af.svelte

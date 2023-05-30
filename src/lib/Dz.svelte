@@ -1,5 +1,44 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
-<rect fill="#fff" width="900" height="600"/>
-<rect fill="#006233" width="450" height="600"/>
-<path fill="#d21034" d="M580,225a150,150 0 1,0 0,150 120,120 0 1,1 0-150m5,75-135-44 84,115v-142l-84,115z"/>
+<script>
+  export let size = '24';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 600"
+>
+  <rect fill="#fff" width="900" height="600" />
+  <rect fill="#006233" width="450" height="600" />
+  <path
+    fill="#d21034"
+    d="M580,225a150,150 0 1,0 0,150 120,120 0 1,1 0-150m5,75-135-44 84,115v-142l-84,115z"
+  />
 </svg>
+
+<!--
+@component
+[Go to Document](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

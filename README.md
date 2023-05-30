@@ -75,13 +75,22 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 - [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 - [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 
+
+## Props
+
+- size = '24';
+
+## IDE support
+
+If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, props, and events.
+
 ## Size
 
 Use the `size` prop to change the flag sizes.
 
 ```html
 <script>
-  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from "svelte-flags";
+  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flags';
 </script>
 
 <div>
@@ -119,7 +128,7 @@ Or you can use `size` and `class` props together.
 Tailwind CSS
 <Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
 Tailwind CSS + Size
-<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150"/>
+<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150" />
 Tailwind CSS + size null
 <Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size="150" />
 ```
@@ -142,15 +151,15 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 All icons have the following events:
 
-```
-on:click
-on:mouseenter
-on:mouseleave
-on:mouseover
-on:mouseout
-on:blur
-on:focus
-```
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
 
 ## Passing down other attributes
 
@@ -186,7 +195,6 @@ You can pass other attibutes as well.
 
 Use `import * as Icon from 'svelte-circle-flags`.
 
-
 ```html
 <script>
   import * as Icon from 'svelte-flags';
@@ -211,11 +219,9 @@ Use `import * as Icon from 'svelte-circle-flags`.
 
 [ISO 3166 Country Codes](https://github.com/shinokada/svelte-flags/blob/main/iso-3166-country-codes.md)
 
-
 ## Credit
 
 All the credits goes to [country-flags](https://github.com/hampusborgos/country-flags)
-
 
 ## Other icons
 

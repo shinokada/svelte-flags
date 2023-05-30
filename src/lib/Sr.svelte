@@ -1,1 +1,43 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><path fill="#007A33" d="M0 0h900v600H0z"/><path fill="#fff" d="M0 120h900v360H0z"/><path fill="#C8102E" d="M0 180h900v240H0z"/><path d="M450 191.459l70.534 217.082-184.661-134.164h228.254L379.466 408.541z" fill="#FFCD00"/></svg>
+<script>
+  export let size = '24';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 600"
+  ><path fill="#007A33" d="M0 0h900v600H0z" /><path fill="#fff" d="M0 120h900v360H0z" /><path
+    fill="#C8102E"
+    d="M0 180h900v240H0z"
+  /><path
+    d="M450 191.459l70.534 217.082-184.661-134.164h228.254L379.466 408.541z"
+    fill="#FFCD00"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

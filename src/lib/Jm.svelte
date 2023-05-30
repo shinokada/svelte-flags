@@ -1,1 +1,40 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><defs><clipPath id="a"><path d="M0 0h12v6H0z"/></clipPath></defs><path fill="#007749" d="M0 0h12v6H0z"/><path fill="#2d2926" stroke="#ffb81c" clip-path="url(#a)" d="M-2-1v8l16-8v8z"/></svg>
+<script>
+  export let size = '24';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 12 6"
+  ><defs><clipPath id="a"><path d="M0 0h12v6H0z" /></clipPath></defs><path
+    fill="#007749"
+    d="M0 0h12v6H0z"
+  /><path fill="#2d2926" stroke="#ffb81c" clip-path="url(#a)" d="M-2-1v8l16-8v8z" /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

@@ -1,7 +1,43 @@
-<script>export let size="24";</script><svg width={size} height={size} {...$$restProps} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18">
-<title>Flag of The Gambia</title>
-<path d="m0,0h27v18H0" fill="#3A7728"/>
-<path d="m0,0h27v11H0" fill="#0C1C8C"/>
-<path d="m0,0h27v6H0" fill="#CE1126"/>
-<path d="m0,6.5h27m0,5H0" stroke="#FFF"/>
+<script>
+  export let size = '24';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 27 18"
+>
+  <title>Flag of The Gambia</title>
+  <path d="m0,0h27v18H0" fill="#3A7728" />
+  <path d="m0,0h27v11H0" fill="#0C1C8C" />
+  <path d="m0,0h27v6H0" fill="#CE1126" />
+  <path d="m0,6.5h27m0,5H0" stroke="#FFF" />
 </svg>
+
+<!--
+@component
+[Go to Document](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
