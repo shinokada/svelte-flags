@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/shinokada/svelte-flags/compare/v0.4.3...v0.4.4) (2023-06-01)
+
+
+### Features
+
+* add || ^4.0.0 to peerDependencies ([4ddfe16](https://github.com/shinokada/svelte-flags/commit/4ddfe16382a8ee0bd6a4684fa4b8497aba7bb2d5))
+
 ### [0.4.3](https://github.com/shinokada/svelte-flags/compare/v0.4.2...v0.4.3) (2023-05-30)
 
 
