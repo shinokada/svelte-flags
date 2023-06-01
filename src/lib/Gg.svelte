@@ -1,11 +1,13 @@
 <script>
   export let size = '24';
+  export let role = 'img';
 </script>
 
 <svg
   width={size}
   height={size}
   {...$$restProps}
+  {role}
   on:click
   on:keydown
   on:keyup
@@ -32,6 +34,7 @@
 [Go to Document](https://svelte-flags.codewithshin.com/)
 ## Props
 @prop size = '24';
+@prop role = 'img';
 ## Event
 - on:click
 - on:keydown

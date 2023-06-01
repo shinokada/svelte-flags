@@ -75,10 +75,10 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 - [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 - [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 
-
 ## Props
 
 - size = '24';
+- role = 'img';
 
 ## IDE support
 

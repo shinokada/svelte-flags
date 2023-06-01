@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.4](https://github.com/shinokada/svelte-flags/compare/v0.4.3...v0.4.4) (2023-06-01)
 
-
 ### Features
 
-* add || ^4.0.0 to peerDependencies ([4ddfe16](https://github.com/shinokada/svelte-flags/commit/4ddfe16382a8ee0bd6a4684fa4b8497aba7bb2d5))
+- add || ^4.0.0 to peerDependencies ([4ddfe16](https://github.com/shinokada/svelte-flags/commit/4ddfe16382a8ee0bd6a4684fa4b8497aba7bb2d5))
 
 ### [0.4.3](https://github.com/shinokada/svelte-flags/compare/v0.4.2...v0.4.3) (2023-05-30)
 
-
 ### Features
 
-* add component docs ([acb4c2c](https://github.com/shinokada/svelte-flags/commit/acb4c2cb7bc933b987baeca1ce69262c0b7e604a))
+- add component docs ([acb4c2c](https://github.com/shinokada/svelte-flags/commit/acb4c2cb7bc933b987baeca1ce69262c0b7e604a))
 
 ### [0.4.2](https://github.com/shinokada/svelte-flags/compare/v0.4.1...v0.4.2) (2023-05-12)
 
