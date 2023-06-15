@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.5](https://github.com/shinokada/svelte-flags/compare/v0.4.4...v0.4.5) (2023-06-01)
 
-
 ### Features
 
-* add prop role="img" ([af06d1f](https://github.com/shinokada/svelte-flags/commit/af06d1f705949db275a6284f61a49a220d08304f))
+- add prop role="img" ([af06d1f](https://github.com/shinokada/svelte-flags/commit/af06d1f705949db275a6284f61a49a220d08304f))
 
 ### [0.4.4](https://github.com/shinokada/svelte-flags/compare/v0.4.3...v0.4.4) (2023-06-01)
 
