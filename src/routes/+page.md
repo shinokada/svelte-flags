@@ -22,107 +22,63 @@ pnpm i -D svelte-flags
 
 ```html
 <script>
-  import { Us } from 'svelte-flags';
+  import { Icon } from 'svelte-flags';
 </script>
 
-<Us />
+<Icon name="us" />
 ```
 
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import Us from 'svelte-flags/Us.svelte';
-</script>
-
-<Us />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-As of March 2023, the `typescript@beta` version is now available:
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
-```
-
-## REPL
-
-- [REPL 1](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
-- [REPL 2](https://svelte.dev/repl/445d2bd2211a4386b5cba3953d8f9fbd)
 
 ## Props
 
-- size = '24';
-- role = 'img';
+- export let name;
+- export let width = "24";
+- export let height = "24";
+- export let role = 'img';
+- export let ariaLabel = name;
 
 ## IDE support
 
-If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, props, and events.
+If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, and an example.
+
 
 ## Size
 
-Use the `size` prop to change the flag sizes.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<script>
-  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flags';
-</script>
-
-<div>
-  <Us size="200" />
-  <Ca size="200" />
-  <Fr size="200" />
-  <De size="200" />
-  <Dk size="200" />
-  <Jp size="200" />
-  <No size="200" />
-  <Ch size="200" />
-  <Cz size="200" />
-</div>
+<Icon name="us" width="100" height="100" />
 ```
 
-## CSS frameworks support
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
-[REPL](https://svelte.dev/repl/7611e8f78f3847d4bb89f7e0179ce3d9)
+```html
+<Icon name="us" class="shrink-0 h-20 w-20" />
+```
 
-You can change size and other CSS using the `class` prop.
+## CSS frameworks suport
+
+You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
 Tailwind CSS example:
 
 ```html
-<Us class="rounded-full bg-white h-40 w-40 ring-2 rring-gray-300 m-4" />
+<Icon name="us" class="inline m-1" />
 ```
 
-Or you can use `size` and `class` props together.
+Bootstrap examples:
 
 ```html
-Tailwind CSS
-<Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
-Tailwind CSS + Size
-<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150" />
-Tailwind CSS + size null
-<Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size="150" />
+<Icon name="us" class="position-absolute top-0 px-1" />
 ```
 
-Bootstrap example:
+## aria-label
+
+All icons have aria-label. For example `us` has `aria-label="us"`.
+Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Us class="position-absolute top-0 px-1" />
+<Icon name="us" ariaLabel="us flag" />
 ```
 
 ## Unfocusable icon
@@ -130,7 +86,7 @@ Bootstrap example:
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Us tabindex="-1" />
+<Icon name="us"  tabindex="-1" />
 ```
 
 ## Events
@@ -152,69 +108,50 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Us tabindex="0" />
+<Icon name="us"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<svelte:component this="{Us}" />
+<svelte:component this="{Icon}" name="us" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { Us } from 'svelte-flags';
+  import {Icon} from 'svelte-flags';
   import { onMount } from 'svelte';
   const props = {
+    name: 'us',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Us({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
+
 ## Import all
 
-Use `import * as Icon from 'svelte-circle-flags`.
+Use `import {Icon, icons} from 'svelte-flags';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-flags';
+  import {Icon, icons} from 'svelte-flags';
 </script>
-<h1>Size</h1>
-<Icon.Fr size="30" />
-<Icon.De size="40" />
 
-<h1>CSS HEX color</h1>
-<Icon.Dk color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.Jp class="text-blue-500" />
-<Icon.No class="text-pink-700" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
-
-## Icon Names
-
-[Icon list](/flags.md)
-
-## ISO 3166 Country Codes
-
-[ISO 3166 Country Codes](https://github.com/shinokada/svelte-flags/blob/main/iso-3166-country-codes.md)
-
-## Credit
-
-All the credits goes to [country-flags](https://github.com/hampusborgos/country-flags)
 
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-
-## Experience lightning-fast browsing and offline access with Our PWA
-
-This website can be downloaded and installed on your device for offline access as a Progressive Web App.
-
-To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
+[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
