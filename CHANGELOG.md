@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/shinokada/svelte-flags/compare/v0.6.2...v0.6.3) (2023-09-01)
+
+
+### Features
+
+* smaller compiled size and Icon component ([99fe25e](https://github.com/shinokada/svelte-flags/commit/99fe25e881813174a1bfae0272a34732b78a0cbe))
+
 ### [0.6.2](https://github.com/shinokada/svelte-flags/compare/v0.6.1...v0.6.2) (2023-09-01)
 
 ### [0.6.1](https://github.com/shinokada/svelte-flags/compare/v0.5.1...v0.6.1) (2023-09-01)
