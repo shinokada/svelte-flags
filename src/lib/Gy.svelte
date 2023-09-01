@@ -1,0 +1,39 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+  export let ariaLabel = 'Gy';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  {role}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 300"
+>
+  <rect width="500" height="300" fill="#009e49" />
+  <path d="M 0,0 L 500,150 L 0,300 z" fill="#fff" />
+  <path d="M 0,13.05 L 456,150 L 0,286.95 z" fill="#fcd116" />
+  <path d="M 0,0 L 250,150 L 0,300 z" fill="#000" />
+  <path d="M 0,17.5 L 220.85,150 L 0,282.5 z" fill="#ce1126" />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.vercel.app)
+## Props
+@prop export let size = '24';
+@prop export let role = 'img';
+@prop export let ariaLabel = 'Gy';
+-->

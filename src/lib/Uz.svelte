@@ -1,0 +1,62 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+  export let ariaLabel = 'Uz';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  {...$$restProps}
+  {role}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 500 250"
+  ><path fill="#1eb53a" d="M0 0h500v250H0z" /><path fill="#0099b5" d="M0 0h500v125H0z" /><path
+    fill="#ce1126"
+    d="M0 80h500v90H0z"
+  /><path fill="#fff" d="M0 85h500v80H0z" /><circle cx="70" cy="40" r="30" fill="#fff" /><circle
+    cx="80"
+    cy="40"
+    r="30"
+    fill="#0099b5"
+  /><g fill="#fff" transform="translate(136 64)"
+    ><g id="e"
+      ><g id="d"
+        ><g id="c"
+          ><g id="b"
+            ><path id="a" d="M0-6v6h3" transform="rotate(18 0 -6)" /><use
+              xlink:href="#a"
+              transform="scale(-1 1)"
+            /></g
+          ><use xlink:href="#b" transform="rotate(72)" /></g
+        ><use xlink:href="#b" transform="rotate(-72)" /><use
+          xlink:href="#c"
+          transform="rotate(144)"
+        /></g
+      ><use xlink:href="#d" y="-24" /><use xlink:href="#d" y="-48" /></g
+    ><use xlink:href="#e" x="24" /><use xlink:href="#e" x="48" /><use xlink:href="#d" x="-48" /><use
+      xlink:href="#d"
+      x="-24"
+    /><use xlink:href="#d" x="-24" y="-24" /></g
+  ></svg
+>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.vercel.app)
+## Props
+@prop export let size = '24';
+@prop export let role = 'img';
+@prop export let ariaLabel = 'Uz';
+-->
