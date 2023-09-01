@@ -2,27 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.5.1](https://github.com/shinokada/svelte-flags/compare/v0.4.7...v0.5.1) (2023-08-03)
+### [0.6.1](https://github.com/shinokada/svelte-flags/compare/v0.5.1...v0.6.1) (2023-09-01)
 
+### [0.5.1](https://github.com/shinokada/svelte-flags/compare/v0.4.7...v0.5.1) (2023-08-03)
 
 ### Features
 
-* use two files ([c24a93b](https://github.com/shinokada/svelte-flags/commit/c24a93b04bab54337f44e92cde5e37afccadc70d))
+- use two files ([c24a93b](https://github.com/shinokada/svelte-flags/commit/c24a93b04bab54337f44e92cde5e37afccadc70d))
 
 ### [0.4.7](https://github.com/shinokada/svelte-flags/compare/v0.4.6...v0.4.7) (2023-07-20)
 
-
 ### Features
 
-* add size range ([1d9307e](https://github.com/shinokada/svelte-flags/commit/1d9307eb4990a01aca35b4702f929e134393da75))
-* layout update ([8da8f47](https://github.com/shinokada/svelte-flags/commit/8da8f4713523a9ece0f4ae70ff6cdbebba54d648))
-
+- add size range ([1d9307e](https://github.com/shinokada/svelte-flags/commit/1d9307eb4990a01aca35b4702f929e134393da75))
+- layout update ([8da8f47](https://github.com/shinokada/svelte-flags/commit/8da8f4713523a9ece0f4ae70ff6cdbebba54d648))
 
 ### Bug Fixes
 
-* homepage update ([c239c96](https://github.com/shinokada/svelte-flags/commit/c239c96bcd6b22540361708be1e4e306d2a790fc))
-* navbar style ([9f48617](https://github.com/shinokada/svelte-flags/commit/9f486172d8ab5fedec51e0444092d9c6d62ae6d2))
-* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([9e9a514](https://github.com/shinokada/svelte-flags/commit/9e9a514940a320de1df6a21984f4eb84a9e998c3))
+- homepage update ([c239c96](https://github.com/shinokada/svelte-flags/commit/c239c96bcd6b22540361708be1e4e306d2a790fc))
+- navbar style ([9f48617](https://github.com/shinokada/svelte-flags/commit/9f486172d8ab5fedec51e0444092d9c6d62ae6d2))
+- update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([9e9a514](https://github.com/shinokada/svelte-flags/commit/9e9a514940a320de1df6a21984f4eb84a9e998c3))
 
 ### [0.4.6](https://github.com/shinokada/svelte-flags/compare/v0.4.5...v0.4.6) (2023-06-15)
 
