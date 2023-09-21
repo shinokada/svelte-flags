@@ -4,11 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.6.4](https://github.com/shinokada/svelte-flags/compare/v0.6.3...v0.6.4) (2023-09-21)
 
-
 ### Features
 
-* add context ([2b70f6c](https://github.com/shinokada/svelte-flags/commit/2b70f6c73712cced522248e18ef711a75940ff9c))
-* add sidebar menu ([10125ab](https://github.com/shinokada/svelte-flags/commit/10125ab7f468e0bfde2bca48e6c145832c8fab1b))
+- add context ([2b70f6c](https://github.com/shinokada/svelte-flags/commit/2b70f6c73712cced522248e18ef711a75940ff9c))
+- add sidebar menu ([10125ab](https://github.com/shinokada/svelte-flags/commit/10125ab7f468e0bfde2bca48e6c145832c8fab1b))
 
 ### [0.6.3](https://github.com/shinokada/svelte-flags/compare/v0.6.2...v0.6.3) (2023-09-01)
 
