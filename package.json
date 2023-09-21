@@ -1,6 +1,6 @@
 {
   "name": "svelte-flags",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "main": "dist/index.js",
   "description": "Country flag icon components for Sveltejs",
   "author": {
