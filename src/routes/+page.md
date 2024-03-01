@@ -317,4 +317,4 @@ All the credits goes to [country-flags](https://github.com/hampusborgos/country-
 
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
