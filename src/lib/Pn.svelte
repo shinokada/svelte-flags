@@ -169,7 +169,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-flags.vercel.app)
+[Go to docs](https://svelte-flags.codewithshin.com)
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';

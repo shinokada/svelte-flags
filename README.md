@@ -20,7 +20,6 @@ See the [Svelte Flags documentation](https://svelte-flags.codewithshin.com/) to 
 
 [Icon names](https://svelte-flags.codewithshin.com/icons)
 
-
 ## Installation
 
 ```sh

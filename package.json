@@ -1111,6 +1111,7 @@
     "./Zw.svelte": {
       "types": "./dist/Zw.svelte.d.ts",
       "svelte": "./dist/Zw.svelte"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }
