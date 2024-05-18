@@ -1,6 +1,6 @@
 
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, H2, H3 } from 'runes-webkit';
+  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -24,10 +24,17 @@
 
 <H2>Installation</H2>
 
-<p>Install Svelte and Svelte Flags:</p>
+<p>Install Svelte:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
+<p>Install <Code>svelte-ionicons v2</Code>:</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
+
+<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/installation-3.md'] as string} />
 
 <H2>Basic Usage</H2>
 
@@ -50,7 +57,7 @@
 
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have "...restProps", you can pass other attibutes as well.</p>
+<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
 
