@@ -1,61 +1,96 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'Bi';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "bi" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 500 300"
->
-  <defs>
-    <g id="b" fill="#1eb53a">
-      <g id="s">
-        <g id="t">
-          <g id="c">
-            <path id="h" d="M0,-20V0H20" transform="rotate(30,0,-20)" />
-            <use xlink:href="#h" transform="scale(-1,1)" />
-          </g>
-          <use xlink:href="#c" transform="rotate(120)" />
-          <use xlink:href="#c" transform="rotate(240)" />
-        </g>
-        <use xlink:href="#t" transform="rotate(180)" />
-      </g>
-      <use xlink:href="#s" fill="#ce1126" transform="scale(0.82)" />
-    </g>
-    <use id="star" xlink:href="#b" x="250" y="106" />
-  </defs>
-  <path d="M0,0H500L0,300H500z" fill="#ce1126" />
-  <path d="M0,0V300L500,0V300z" fill="#1eb53a" />
-  <path d="M0,0 500,300M500,0 0,300" stroke="#fff" stroke-width="40" />
-  <circle cx="250" cy="150" r="85" fill="#fff" />
-  <use xlink:href="#star" />
-  <use xlink:href="#star" transform="rotate(120,250,150)" />
-  <use xlink:href="#star" transform="rotate(240,250,150)" />
-</svg>
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 500 300"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+       <defs> <g id="b" fill="#1eb53a"> <g id="s"> <g id="t"> <g id="c"> <path id="h" d="M0,-20V0H20" transform="rotate(30,0,-20)"/> <use xlink:href="#h" transform="scale(-1,1)"/> </g> <use xlink:href="#c" transform="rotate(120)"/> <use xlink:href="#c" transform="rotate(240)"/> </g> <use xlink:href="#t" transform="rotate(180)"/> </g> <use xlink:href="#s" fill="#ce1126" transform="scale(0.82)"/> </g> <use id="star" xlink:href="#b" x="250" y="106"/> </defs> <path d="M0,0H500L0,300H500z" fill="#ce1126"/> <path d="M0,0V300L500,0V300z" fill="#1eb53a"/> <path d="M0,0 500,300M500,0 0,300" stroke="#fff" stroke-width="40"/> <circle cx="250" cy="150" r="85" fill="#fff"/> <use xlink:href="#star"/> <use xlink:href="#star" transform="rotate(120,250,150)"/> <use xlink:href="#star" transform="rotate(240,250,150)"/>  
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 500 300"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+       <defs> <g id="b" fill="#1eb53a"> <g id="s"> <g id="t"> <g id="c"> <path id="h" d="M0,-20V0H20" transform="rotate(30,0,-20)"/> <use xlink:href="#h" transform="scale(-1,1)"/> </g> <use xlink:href="#c" transform="rotate(120)"/> <use xlink:href="#c" transform="rotate(240)"/> </g> <use xlink:href="#t" transform="rotate(180)"/> </g> <use xlink:href="#s" fill="#ce1126" transform="scale(0.82)"/> </g> <use id="star" xlink:href="#b" x="250" y="106"/> </defs> <path d="M0,0H500L0,300H500z" fill="#ce1126"/> <path d="M0,0V300L500,0V300z" fill="#1eb53a"/> <path d="M0,0 500,300M500,0 0,300" stroke="#fff" stroke-width="40"/> <circle cx="250" cy="150" r="85" fill="#fff"/> <use xlink:href="#star"/> <use xlink:href="#star" transform="rotate(120,250,150)"/> <use xlink:href="#star" transform="rotate(240,250,150)"/>  
+  </svg>
+{/if}
 
 <!--
 @component
-[Go to docs](https://svelte-flags.codewithshin.com)
+[Go to docs](https://svelte-flags.codewithshin.com/)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'Bi';
+@props: 
 -->

@@ -1,0 +1,3 @@
+- size: string = ctx.size || '24';
+- role: string = ctx.role || 'img';
+- ariaLabel: string = '<icon file name>';

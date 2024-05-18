@@ -1,89 +1,96 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'Nz';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "nz" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 1200 600"
-  ><defs
-    ><clipPath id="b"><path d="M0 0h600v300H0z" /></clipPath><clipPath id="c"
-      ><path d="M0 0l300 150H0zm300 0h300L300 150zm0 150h300v150zm0 0v150H0z" /></clipPath
-    ><g id="d"
-      ><g id="a"
-        ><path d="M0 0v.5L1 0z" transform="translate(0 -.325)" /><path
-          d="M0 0v-.5L1 0z"
-          transform="rotate(-36 .5 -.162)"
-        /></g
-      ><use xlink:href="#a" transform="scale(-1 1)" /><use
-        xlink:href="#a"
-        transform="rotate(72 0 0)"
-      /><use xlink:href="#a" transform="rotate(-72 0 0)" /><use
-        xlink:href="#a"
-        transform="scale(-1 1) rotate(72)"
-      /></g
-    ></defs
-  ><path fill="#012169" d="M0 0h1200v600H0z" /><path
-    stroke="#FFF"
-    d="M0 0l600 300M0 300L600 0"
-    stroke-width="60"
-    clip-path="url(#b)"
-  /><path
-    stroke="#C8102E"
-    d="M0 0l600 300M0 300L600 0"
-    stroke-width="40"
-    clip-path="url(#c)"
-  /><path stroke="#FFF" d="M300 0v300M0 150h600" stroke-width="100" clip-path="url(#b)" /><path
-    stroke="#C8102E"
-    d="M300 0v300M0 150h600"
-    stroke-width="60"
-    clip-path="url(#b)"
-  /><use xlink:href="#d" fill="#FFF" transform="matrix(45.4 0 0 45.4 900 120)" /><use
-    xlink:href="#d"
-    fill="#C8102E"
-    transform="matrix(30 0 0 30 900 120)"
-  /><g transform="rotate(82 900 240)"
-    ><use xlink:href="#d" fill="#FFF" transform="rotate(-82 519.022 -457.666) scale(40.4)" /><use
-      xlink:href="#d"
-      fill="#C8102E"
-      transform="rotate(-82 519.022 -457.666) scale(25)"
-    /></g
-  ><g transform="rotate(82 900 240)"
-    ><use xlink:href="#d" fill="#FFF" transform="rotate(-82 668.57 -327.666) scale(45.4)" /><use
-      xlink:href="#d"
-      fill="#C8102E"
-      transform="rotate(-82 668.57 -327.666) scale(30)"
-    /></g
-  ><use xlink:href="#d" fill="#FFF" transform="matrix(50.4 0 0 50.4 900 480)" /><use
-    xlink:href="#d"
-    fill="#C8102E"
-    transform="matrix(35 0 0 35 900 480)"
-  /></svg
->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 1200 600"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <defs><clipPath id="b"><path d="M0 0h600v300H0z"/></clipPath><clipPath id="c"><path d="M0 0l300 150H0zm300 0h300L300 150zm0 150h300v150zm0 0v150H0z"/></clipPath><g id="d"><g id="a"><path d="M0 0v.5L1 0z" transform="translate(0 -.325)"/><path d="M0 0v-.5L1 0z" transform="rotate(-36 .5 -.162)"/></g><use xlink:href="#a" transform="scale(-1 1)"/><use xlink:href="#a" transform="rotate(72 0 0)"/><use xlink:href="#a" transform="rotate(-72 0 0)"/><use xlink:href="#a" transform="scale(-1 1) rotate(72)"/></g></defs><path fill="#012169" d="M0 0h1200v600H0z"/><path stroke="#FFF" d="M0 0l600 300M0 300L600 0" stroke-width="60" clip-path="url(#b)"/><path stroke="#C8102E" d="M0 0l600 300M0 300L600 0" stroke-width="40" clip-path="url(#c)"/><path stroke="#FFF" d="M300 0v300M0 150h600" stroke-width="100" clip-path="url(#b)"/><path stroke="#C8102E" d="M300 0v300M0 150h600" stroke-width="60" clip-path="url(#b)"/><use xlink:href="#d" fill="#FFF" transform="matrix(45.4 0 0 45.4 900 120)"/><use xlink:href="#d" fill="#C8102E" transform="matrix(30 0 0 30 900 120)"/><g transform="rotate(82 900 240)"><use xlink:href="#d" fill="#FFF" transform="rotate(-82 519.022 -457.666) scale(40.4)"/><use xlink:href="#d" fill="#C8102E" transform="rotate(-82 519.022 -457.666) scale(25)"/></g><g transform="rotate(82 900 240)"><use xlink:href="#d" fill="#FFF" transform="rotate(-82 668.57 -327.666) scale(45.4)"/><use xlink:href="#d" fill="#C8102E" transform="rotate(-82 668.57 -327.666) scale(30)"/></g><use xlink:href="#d" fill="#FFF" transform="matrix(50.4 0 0 50.4 900 480)"/><use xlink:href="#d" fill="#C8102E" transform="matrix(35 0 0 35 900 480)"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 1200 600"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <defs><clipPath id="b"><path d="M0 0h600v300H0z"/></clipPath><clipPath id="c"><path d="M0 0l300 150H0zm300 0h300L300 150zm0 150h300v150zm0 0v150H0z"/></clipPath><g id="d"><g id="a"><path d="M0 0v.5L1 0z" transform="translate(0 -.325)"/><path d="M0 0v-.5L1 0z" transform="rotate(-36 .5 -.162)"/></g><use xlink:href="#a" transform="scale(-1 1)"/><use xlink:href="#a" transform="rotate(72 0 0)"/><use xlink:href="#a" transform="rotate(-72 0 0)"/><use xlink:href="#a" transform="scale(-1 1) rotate(72)"/></g></defs><path fill="#012169" d="M0 0h1200v600H0z"/><path stroke="#FFF" d="M0 0l600 300M0 300L600 0" stroke-width="60" clip-path="url(#b)"/><path stroke="#C8102E" d="M0 0l600 300M0 300L600 0" stroke-width="40" clip-path="url(#c)"/><path stroke="#FFF" d="M300 0v300M0 150h600" stroke-width="100" clip-path="url(#b)"/><path stroke="#C8102E" d="M300 0v300M0 150h600" stroke-width="60" clip-path="url(#b)"/><use xlink:href="#d" fill="#FFF" transform="matrix(45.4 0 0 45.4 900 120)"/><use xlink:href="#d" fill="#C8102E" transform="matrix(30 0 0 30 900 120)"/><g transform="rotate(82 900 240)"><use xlink:href="#d" fill="#FFF" transform="rotate(-82 519.022 -457.666) scale(40.4)"/><use xlink:href="#d" fill="#C8102E" transform="rotate(-82 519.022 -457.666) scale(25)"/></g><g transform="rotate(82 900 240)"><use xlink:href="#d" fill="#FFF" transform="rotate(-82 668.57 -327.666) scale(45.4)"/><use xlink:href="#d" fill="#C8102E" transform="rotate(-82 668.57 -327.666) scale(30)"/></g><use xlink:href="#d" fill="#FFF" transform="matrix(50.4 0 0 50.4 900 480)"/><use xlink:href="#d" fill="#C8102E" transform="matrix(35 0 0 35 900 480)"/>
+  </svg>
+{/if}
 
 <!--
 @component
-[Go to docs](https://svelte-flags.codewithshin.com)
+[Go to docs](https://svelte-flags.codewithshin.com/)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'Nz';
+@props: 
 -->

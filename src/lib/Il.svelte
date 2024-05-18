@@ -1,44 +1,96 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'Il';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "il" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1100 800"
-  ><path d="M0 0h1100v800H0z" fill="#fff" /><path
-    d="M0 75h1100v125H0zm0 525h1100v125H0z"
-    fill="#0038b8"
-  /><path
-    d="M423.816 472.853h252.368L550 254.295zM550 545.705l126.184-218.558H423.816z"
-    fill="none"
-    stroke="#0038b8"
-    stroke-width="27.5"
-  /></svg
->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 1100 800"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M0 0h1100v800H0z" fill="#fff"/><path d="M0 75h1100v125H0zm0 525h1100v125H0z" fill="#0038b8"/><path d="M423.816 472.853h252.368L550 254.295zM550 545.705l126.184-218.558H423.816z" fill="none" stroke="#0038b8" stroke-width="27.5"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 1100 800"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M0 0h1100v800H0z" fill="#fff"/><path d="M0 75h1100v125H0zm0 525h1100v125H0z" fill="#0038b8"/><path d="M423.816 472.853h252.368L550 254.295zM550 545.705l126.184-218.558H423.816z" fill="none" stroke="#0038b8" stroke-width="27.5"/>
+  </svg>
+{/if}
 
 <!--
 @component
-[Go to docs](https://svelte-flags.codewithshin.com)
+[Go to docs](https://svelte-flags.codewithshin.com/)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'Il';
+@props: 
 -->

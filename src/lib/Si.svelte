@@ -1,68 +1,96 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'Si';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "si" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  viewBox="0 0 12 6"
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  ><path d="M0 0h12v6H0z" fill="red" /><path d="M0 0h12v4H0z" fill="#005ce5" /><path
-    d="M0 0h12v2H0z"
-    fill="#fff"
-  /><g transform="matrix(.021 0 0 .021 -.106 3.478)"
-    ><path
-      d="M147.913-115.518c-.64 0-1.277.014-1.913.032-12.37.32-23.983 3.515-32.252 7.41l.001.012c-.904.378-1.79.757-2.632 1.136l2.842 44.519c1.97 23.264 17.131 36.81 33.976 42.128 16.846-5.319 32.006-18.864 33.975-42.128l2.827-44.378a64.852 64.852 0 0 0-2.632-1.277v-.011c-8.69-4.095-21.074-7.42-34.15-7.442l-.028-.001h-.014z"
-      fill="#005ce5"
-      fill-rule="evenodd"
-    /><path
-      d="M147.934-84.712l-8.314 16.237-5.375-6.983-14.046 18.561c.254 1.153.552 2.265.878 3.35 1.568 2.648 4.583 5.67 8.449 5.67 3.068 0 6.136-2.454 9.204-2.454 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 3.831 0 6.825-2.967 8.406-5.597.338-1.115.64-2.263.902-3.448l-14.027-18.537-5.375 6.983zm-9.204 36.836c-3.068 0-6.136 2.454-9.204 2.454-2.428 0-4.514-.86-6.13-2.08a41.98 41.98 0 0 0 1.835 3.504c1.265.787 2.704 1.319 4.295 1.319 3.068 0 6.136-2.455 9.204-2.455 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 1.568 0 2.987-.52 4.24-1.289a42.193 42.193 0 0 0 1.835-3.491c-1.609 1.197-3.675 2.037-6.075 2.037-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454zm0 5.197c-3.068 0-6.136 2.454-9.204 2.454-.667 0-1.3-.078-1.914-.196 5.307 7.091 12.549 11.838 20.316 14.567 7.751-2.725 14.982-7.475 20.286-14.555-.6.113-1.22.184-1.871.184-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454z"
-      fill="#fff"
-      fill-rule="evenodd"
-    /><g id="b" fill="#ffe500"
-      ><path id="a" d="M134.094-109.56h6.96l-3.48 6.027" fill="#ffe500" fill-rule="evenodd" /><use
-        height="300"
-        transform="matrix(1 0 0 -1 0 -215.104)"
-        width="600"
-        xlink:href="#a"
-      /></g
-    ><g fill="#ffe500"
-      ><use height="300" transform="translate(20.72)" width="600" xlink:href="#b" /><use
-        height="300"
-        transform="translate(10.36 13.875)"
-        width="600"
-        xlink:href="#b"
-      /></g
-    ></g
-  ><path
-    d="M3 1.052zm-.718.157a2.26 2.26 0 0 0-.055.023l.06.935c.041.489.36.773.713.885.354-.112.672-.396.714-.885l.059-.932a1.362 1.362 0 0 0-.055-.026l-.056.927a.947.947 0 0 1-.662.86.947.947 0 0 1-.662-.86z"
-    fill="red"
-    fill-rule="evenodd"
-  /></svg
->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 12 6"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M0 0h12v6H0z" fill="red"/><path d="M0 0h12v4H0z" fill="#005ce5"/><path d="M0 0h12v2H0z" fill="#fff"/><g transform="matrix(.021 0 0 .021 -.106 3.478)"><path d="M147.913-115.518c-.64 0-1.277.014-1.913.032-12.37.32-23.983 3.515-32.252 7.41l.001.012c-.904.378-1.79.757-2.632 1.136l2.842 44.519c1.97 23.264 17.131 36.81 33.976 42.128 16.846-5.319 32.006-18.864 33.975-42.128l2.827-44.378a64.852 64.852 0 0 0-2.632-1.277v-.011c-8.69-4.095-21.074-7.42-34.15-7.442l-.028-.001h-.014z" fill="#005ce5" fill-rule="evenodd"/><path d="M147.934-84.712l-8.314 16.237-5.375-6.983-14.046 18.561c.254 1.153.552 2.265.878 3.35 1.568 2.648 4.583 5.67 8.449 5.67 3.068 0 6.136-2.454 9.204-2.454 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 3.831 0 6.825-2.967 8.406-5.597.338-1.115.64-2.263.902-3.448l-14.027-18.537-5.375 6.983zm-9.204 36.836c-3.068 0-6.136 2.454-9.204 2.454-2.428 0-4.514-.86-6.13-2.08a41.98 41.98 0 0 0 1.835 3.504c1.265.787 2.704 1.319 4.295 1.319 3.068 0 6.136-2.455 9.204-2.455 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 1.568 0 2.987-.52 4.24-1.289a42.193 42.193 0 0 0 1.835-3.491c-1.609 1.197-3.675 2.037-6.075 2.037-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454zm0 5.197c-3.068 0-6.136 2.454-9.204 2.454-.667 0-1.3-.078-1.914-.196 5.307 7.091 12.549 11.838 20.316 14.567 7.751-2.725 14.982-7.475 20.286-14.555-.6.113-1.22.184-1.871.184-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454z" fill="#fff" fill-rule="evenodd"/><g id="b" fill="#ffe500"><path id="a" d="M134.094-109.56h6.96l-3.48 6.027" fill="#ffe500" fill-rule="evenodd"/><use height="300" transform="matrix(1 0 0 -1 0 -215.104)" width="600" xlink:href="#a"/></g><g fill="#ffe500"><use height="300" transform="translate(20.72)" width="600" xlink:href="#b"/><use height="300" transform="translate(10.36 13.875)" width="600" xlink:href="#b"/></g></g><path d="M3 1.052zm-.718.157a2.26 2.26 0 0 0-.055.023l.06.935c.041.489.36.773.713.885.354-.112.672-.396.714-.885l.059-.932a1.362 1.362 0 0 0-.055-.026l-.056.927a.947.947 0 0 1-.662.86.947.947 0 0 1-.662-.86z" fill="red" fill-rule="evenodd"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 12 6"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M0 0h12v6H0z" fill="red"/><path d="M0 0h12v4H0z" fill="#005ce5"/><path d="M0 0h12v2H0z" fill="#fff"/><g transform="matrix(.021 0 0 .021 -.106 3.478)"><path d="M147.913-115.518c-.64 0-1.277.014-1.913.032-12.37.32-23.983 3.515-32.252 7.41l.001.012c-.904.378-1.79.757-2.632 1.136l2.842 44.519c1.97 23.264 17.131 36.81 33.976 42.128 16.846-5.319 32.006-18.864 33.975-42.128l2.827-44.378a64.852 64.852 0 0 0-2.632-1.277v-.011c-8.69-4.095-21.074-7.42-34.15-7.442l-.028-.001h-.014z" fill="#005ce5" fill-rule="evenodd"/><path d="M147.934-84.712l-8.314 16.237-5.375-6.983-14.046 18.561c.254 1.153.552 2.265.878 3.35 1.568 2.648 4.583 5.67 8.449 5.67 3.068 0 6.136-2.454 9.204-2.454 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 3.831 0 6.825-2.967 8.406-5.597.338-1.115.64-2.263.902-3.448l-14.027-18.537-5.375 6.983zm-9.204 36.836c-3.068 0-6.136 2.454-9.204 2.454-2.428 0-4.514-.86-6.13-2.08a41.98 41.98 0 0 0 1.835 3.504c1.265.787 2.704 1.319 4.295 1.319 3.068 0 6.136-2.455 9.204-2.455 3.068 0 6.136 2.455 9.204 2.455 3.068 0 6.136-2.455 9.205-2.455 3.068 0 6.136 2.455 9.204 2.455 1.568 0 2.987-.52 4.24-1.289a42.193 42.193 0 0 0 1.835-3.491c-1.609 1.197-3.675 2.037-6.075 2.037-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454zm0 5.197c-3.068 0-6.136 2.454-9.204 2.454-.667 0-1.3-.078-1.914-.196 5.307 7.091 12.549 11.838 20.316 14.567 7.751-2.725 14.982-7.475 20.286-14.555-.6.113-1.22.184-1.871.184-3.068 0-6.136-2.454-9.204-2.454-3.069 0-6.137 2.454-9.205 2.454-3.068 0-6.136-2.454-9.204-2.454z" fill="#fff" fill-rule="evenodd"/><g id="b" fill="#ffe500"><path id="a" d="M134.094-109.56h6.96l-3.48 6.027" fill="#ffe500" fill-rule="evenodd"/><use height="300" transform="matrix(1 0 0 -1 0 -215.104)" width="600" xlink:href="#a"/></g><g fill="#ffe500"><use height="300" transform="translate(20.72)" width="600" xlink:href="#b"/><use height="300" transform="translate(10.36 13.875)" width="600" xlink:href="#b"/></g></g><path d="M3 1.052zm-.718.157a2.26 2.26 0 0 0-.055.023l.06.935c.041.489.36.773.713.885.354-.112.672-.396.714-.885l.059-.932a1.362 1.362 0 0 0-.055-.026l-.056.927a.947.947 0 0 1-.662.86.947.947 0 0 1-.662-.86z" fill="red" fill-rule="evenodd"/>
+  </svg>
+{/if}
 
 <!--
 @component
-[Go to docs](https://svelte-flags.codewithshin.com)
+[Go to docs](https://svelte-flags.codewithshin.com/)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'Si';
+@props: 
 -->

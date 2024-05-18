@@ -1,0 +1,11 @@
+<script>
+  import { Us } from 'svelte-flags';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Us({ target: document.body, props });
+  });
+</script>
