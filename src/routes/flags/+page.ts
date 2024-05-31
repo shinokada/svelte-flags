@@ -1,16 +1,18 @@
 import type { MetaProps } from 'runes-meta-tags';
+const title = 'Icons - Svelte Flags'
+const description = 'Svelte Flags icons and icon names you can copy'
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Icons: Svelte Flags',
-    description: 'Svelte Flags icons and icon names you can copy',
+    title,
+    description,
     og: {
-      title: 'Icons: Svelte Flags',
-      description: 'Svelte Flags icons and icon names you can copy',
+      title,
+      description,
     },
     twitter: {
-      title: 'Icons: Svelte Flags',
-      description: 'Svelte Flags icons and icon names you can copy',
+      title,
+      description,
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

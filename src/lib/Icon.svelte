@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   interface Props{
-    icon: ComponentType;
+    icon: Component;
     size?: string;
     role?: string;
     ariaLabel?: string;
@@ -23,7 +23,7 @@
 @component
 [Go to docs](https://svelte-flags.codewithshin.com/)
 ## Props
-@props: icon: ComponentType;
+@props: icon: Component;
 @props:size?: string;
 @props:role?: string;
 @props:ariaLabel?: string;

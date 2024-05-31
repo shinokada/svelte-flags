@@ -2,12 +2,12 @@
   const extra: ListType[] = [
     {
       name: 'Flags',
-      icon: GridPlusOutline as ComponentType,
+      icon: GridPlusOutline as Component,
       href: '/flags'
     },
     {
       name: 'Icon Sets',
-      icon: GridPlusOutline as ComponentType,
+      icon: GridPlusOutline as Component,
       href: 'https://svelte-svg-icons.codewithshin.com/'
     }
   ];
@@ -18,9 +18,9 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
-  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from 'runes-webkit'
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList,  GridPlusOutline } from 'runes-webkit'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';

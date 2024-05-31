@@ -9,7 +9,7 @@
 </script>
 
 
-<h1>Custom Default Icons</h1>
+<h1>Custom icons - Svelte Flags</h1>
 
 <p>You can create a custom default icon, by using <Code>Icon</Code>:</p>
 

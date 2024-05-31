@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   const config = {
     size: "40",
   };
   import { Icon } from 'svelte-flags';
-  export let icon: ComponentType;
+  export let icon: Component;
 </script>
 
 <Icon {...config} {icon} />

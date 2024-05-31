@@ -1,16 +1,21 @@
 import type { MetaProps } from 'runes-meta-tags';
+const title = 'Props - Svelte Flags v2'
+const description = 'How to use Svelte Flags v2 props'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flags'
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Props - Svelte Flags v2',
-    description: 'How to use props with Svelte Flags v2',
+    title,
+    description,
     og: {
-      title: 'Props - Svelte Flags v2',
-      description: 'How to use props with Svelte Flags v2'
+      title,
+      description,
+      image: imgUrl
     },
     twitter: {
-      title: 'Props - Svelte Flags v2',
-      description: 'How to use props with Svelte Flags v2'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };
