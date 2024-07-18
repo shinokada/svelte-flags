@@ -1,9 +1,9 @@
 import type { MetaProps } from 'runes-meta-tags';
-const title = 'Custom icons - Svelte Flags'
-const description = 'How to create a custom icons with Svelte Flags'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flags'
+const title = 'Custom icons - Svelte Flags';
+const description = 'How to create a custom icons with Svelte Flags';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flags';
 export const load = () => {
-  const pageMetaTags: MetaProps ={
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {

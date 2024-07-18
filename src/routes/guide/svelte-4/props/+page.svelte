@@ -23,13 +23,18 @@
 
 <H2>Size</H2>
 
-<p>To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:</p>
+<p>
+  To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
+</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
 
 <H2>CSS framework</H2>
 
-<p>You can apply CSS framework attributes directly to the icon component using the <Code>class</Code> prop.</p>
+<p>
+  You can apply CSS framework attributes directly to the icon component using the <Code>class</Code>
+  prop.
+</p>
 
 <H3>Tailwind CSS</H3>
 
@@ -41,11 +46,13 @@
 
 <H2>A11y</H2>
 
-<p>All icons have aria-label. For example <Code>Us</Code> has <Code>aria-label="us"</Code>.
-Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.</p>
+<p>
+  All icons have aria-label. For example <Code>Us</Code> has <Code>aria-label="us"</Code>. Use <Code
+    >ariaLabel</Code
+  > prop to modify the <Code>aria-label</Code> value.
+</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} />
-
 
 <H2>Events</H2>
 

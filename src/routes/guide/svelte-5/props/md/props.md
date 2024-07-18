@@ -1,12 +1,6 @@
 - size = ctx.size || '24' 
 - role = ctx.role || 'img' 
-- withEvents = ctx.withEvents || false 
 - title = {} 
 - desc = {} 
-- class: classname 
 - ariaLabel =  <icon file name>  
-- onclick 
-- onkeydown 
-- onkeyup
-- ...restProps
-    
+- ...restProps (class, id, name, role, and all other props from SVGAttributes )

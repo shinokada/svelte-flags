@@ -1,5 +1,7 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -8,85 +10,82 @@
     id?: string;
     desc?: string;
   };
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGElement> {
     size?: string;
     role?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "tj" , 
-    onclick, 
-    onkeydown, 
-    onkeyup,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'tj',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 1400 700"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 1400 700"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path fill="#060" d="M0 0h1400v700H0z" /><path fill="#fff" d="M0 0h1400v500H0z" /><path
+    fill="#c00"
+    d="M0 0h1400v200H0z"
+  /><g fill="#f8c300"
+    ><path
+      d="M672 340.7a12.5 12.5 0 0123.3 5.9v50h9.4v-50a12.5 12.5 0 0123.3-5.9 29.5 29.5 0 10-56 0"
+    /><path
+      d="M678.7 327.65a20 20 0 0121.3 9.55 20 20 0 0121.3-9.55 21.5 21.5 0 00-42.6 0"
+      fill="#fff"
+    /><path
+      id="a"
+      d="M695.3 376.627a38 38 0 01-63.845 24.316 39.5 39.5 0 01-59.734 17.467c3.65 36.426 58.252 28.989 62.32-6.429 17.154 30.115 54.873 21.49 65.91-15.4z"
+    /><use xlink:href="#a" transform="matrix(-1 0 0 1 1400 0)" /><path
+      id="b"
+      d="M658.84 441.31c-7.618 16.446-22.845 19.271-36.164 5.995 0 0 5.354-3.783 11.086-4.826-1.075-4.574 1.13-10.902 4.235-14.324 3.258 2.227 7.804 6.689 8.96 11.874 8.03-1.04 11.883 1.282 11.883 1.282z"
+    /><use xlink:href="#b" transform="rotate(9.37 700 804)" /><use
+      xlink:href="#b"
+      transform="rotate(18.74 700 804)"
+    /><path d="M603 478a340 340 0 01194 0" fill="none" stroke-width="16" stroke="#f8c300" /><g
+      transform="translate(700 380)"
+      ><g transform="translate(0 -140)"
+        ><path
+          id="c"
+          transform="scale(.00005)"
+          d="M0-513674l301930 929245-790463-574305h977066l-790463 574305z"
+        /></g
+      ><g id="d"
+        ><use xlink:href="#c" transform="translate(-70 -121.244)" /><use
+          xlink:href="#c"
+          transform="translate(-121.244 -70)"
+        /><use xlink:href="#c" transform="translate(-140)" /></g
+      ><use xlink:href="#d" transform="scale(-1 1)" /></g
+    ></g
   >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-      <path fill="#060" d="M0 0h1400v700H0z"/><path fill="#fff" d="M0 0h1400v500H0z"/><path fill="#c00" d="M0 0h1400v200H0z"/><g fill="#f8c300"><path d="M672 340.7a12.5 12.5 0 0123.3 5.9v50h9.4v-50a12.5 12.5 0 0123.3-5.9 29.5 29.5 0 10-56 0"/><path d="M678.7 327.65a20 20 0 0121.3 9.55 20 20 0 0121.3-9.55 21.5 21.5 0 00-42.6 0" fill="#fff"/><path id="a" d="M695.3 376.627a38 38 0 01-63.845 24.316 39.5 39.5 0 01-59.734 17.467c3.65 36.426 58.252 28.989 62.32-6.429 17.154 30.115 54.873 21.49 65.91-15.4z"/><use xlink:href="#a" transform="matrix(-1 0 0 1 1400 0)"/><path id="b" d="M658.84 441.31c-7.618 16.446-22.845 19.271-36.164 5.995 0 0 5.354-3.783 11.086-4.826-1.075-4.574 1.13-10.902 4.235-14.324 3.258 2.227 7.804 6.689 8.96 11.874 8.03-1.04 11.883 1.282 11.883 1.282z"/><use xlink:href="#b" transform="rotate(9.37 700 804)"/><use xlink:href="#b" transform="rotate(18.74 700 804)"/><path d="M603 478a340 340 0 01194 0" fill="none" stroke-width="16" stroke="#f8c300"/><g transform="translate(700 380)"><g transform="translate(0 -140)"><path id="c" transform="scale(.00005)" d="M0-513674l301930 929245-790463-574305h977066l-790463 574305z"/></g><g id="d"><use xlink:href="#c" transform="translate(-70 -121.244)"/><use xlink:href="#c" transform="translate(-121.244 -70)"/><use xlink:href="#c" transform="translate(-140)"/></g><use xlink:href="#d" transform="scale(-1 1)"/></g></g>
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 1400 700"
-  >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-      <path fill="#060" d="M0 0h1400v700H0z"/><path fill="#fff" d="M0 0h1400v500H0z"/><path fill="#c00" d="M0 0h1400v200H0z"/><g fill="#f8c300"><path d="M672 340.7a12.5 12.5 0 0123.3 5.9v50h9.4v-50a12.5 12.5 0 0123.3-5.9 29.5 29.5 0 10-56 0"/><path d="M678.7 327.65a20 20 0 0121.3 9.55 20 20 0 0121.3-9.55 21.5 21.5 0 00-42.6 0" fill="#fff"/><path id="a" d="M695.3 376.627a38 38 0 01-63.845 24.316 39.5 39.5 0 01-59.734 17.467c3.65 36.426 58.252 28.989 62.32-6.429 17.154 30.115 54.873 21.49 65.91-15.4z"/><use xlink:href="#a" transform="matrix(-1 0 0 1 1400 0)"/><path id="b" d="M658.84 441.31c-7.618 16.446-22.845 19.271-36.164 5.995 0 0 5.354-3.783 11.086-4.826-1.075-4.574 1.13-10.902 4.235-14.324 3.258 2.227 7.804 6.689 8.96 11.874 8.03-1.04 11.883 1.282 11.883 1.282z"/><use xlink:href="#b" transform="rotate(9.37 700 804)"/><use xlink:href="#b" transform="rotate(18.74 700 804)"/><path d="M603 478a340 340 0 01194 0" fill="none" stroke-width="16" stroke="#f8c300"/><g transform="translate(700 380)"><g transform="translate(0 -140)"><path id="c" transform="scale(.00005)" d="M0-513674l301930 929245-790463-574305h977066l-790463 574305z"/></g><g id="d"><use xlink:href="#c" transform="translate(-70 -121.244)"/><use xlink:href="#c" transform="translate(-121.244 -70)"/><use xlink:href="#c" transform="translate(-140)"/></g><use xlink:href="#d" transform="scale(-1 1)"/></g></g>
-  </svg>
-{/if}
+</svg>
 
 <!--
 @component

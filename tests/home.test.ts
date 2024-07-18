@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-const title = 'Svelte Flags'
-const description = '250+ country flag icon components for Svelte'
-const keywords = 'svelte, runes, country flag icons, icons, svg, sveltekit'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flags'
+const title = 'Svelte Flags';
+const description = '250+ country flag icon components for Svelte';
+const keywords = 'svelte, runes, country flag icons, icons, svg, sveltekit';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flags';
 
 test.beforeEach(async ({ page }) => {
   console.log(`Running ${test.info().title}`);
@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('index page has expected h1', async ({ page }) => {
-	await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
+  await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
 });
 
 test('index page has expected meta title', async ({ page }) => {
@@ -37,20 +37,17 @@ test('index page has expected meta og', async ({ page, baseURL }) => {
   const url = baseURL + '/';
   await expect(metaOgUrl).toHaveAttribute('content', url);
   const metaOgImage = page.locator('meta[property="og:image"]');
-  await expect(metaOgImage).toHaveAttribute(
-    'content',
-    imgUrl
-  );
+  await expect(metaOgImage).toHaveAttribute('content', imgUrl);
 });
 
 test('index page has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
   await expect(metaTwitterTitle).toHaveAttribute('content', 'Svelte Flags');
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');
-  await expect(metaTwitterDescription).toHaveAttribute('content', '250+ country flag icon components for Svelte');
-  const metaTwitterImage = page.locator('meta[name="twitter:image"]');
-  await expect(metaTwitterImage).toHaveAttribute(
+  await expect(metaTwitterDescription).toHaveAttribute(
     'content',
-    imgUrl
+    '250+ country flag icon components for Svelte'
   );
+  const metaTwitterImage = page.locator('meta[name="twitter:image"]');
+  await expect(metaTwitterImage).toHaveAttribute('content', imgUrl);
 });
