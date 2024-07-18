@@ -82,12 +82,12 @@
 </P>
 
 <CodeWrapper>
-<Ca
-  id="my-svg"
-  size="50"
-  transform="rotate(-45)"
-  class="hover:cursor-pointer dark:text-white"
-  onclick={() => alert('hello')}
-/>
+  <Ca
+    id="my-svg"
+    size="50"
+    transform="rotate(-45)"
+    class="hover:cursor-pointer dark:text-white"
+    onclick={() => alert('hello')}
+  />
 </CodeWrapper>
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
