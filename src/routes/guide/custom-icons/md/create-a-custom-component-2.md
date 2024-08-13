@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon as FlagIcon } from '$lib';
+  import { Icon as FlagIcon } from 'svelte-flags';
   import { type Component } from 'svelte';
   const config: { size: string, ariaLabel: string, class: string } = {
     size: "100",
