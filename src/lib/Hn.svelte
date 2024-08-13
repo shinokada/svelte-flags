@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
   import type { SVGAttributes } from 'svelte/elements';
 
@@ -16,19 +16,19 @@
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    title,
-    desc,
-    ariaLabel = 'hn',
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    title, 
+    desc, 
+    ariaLabel =  "hn" , 
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,31 +46,11 @@
   viewBox="0 0 1260 630"
 >
   {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
+    <title id="{title.id}">{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
+    <desc id="{desc.id}">{desc.desc}</desc>
   {/if}
-  <path d="M1260 0H0v630h1260z" fill="#0d3b99" /><path d="M1260 210H0v210h1260z" fill="#fff" /><path
-    id="a"
-    d="M630 280l20.572 63.315-53.859-39.131h66.573l-53.859 39.131z"
-    fill="#0d3b99"
-  /><g id="b"
-    ><use transform="translate(-175 -52.465)" xlink:href="#a" /><use
-      transform="translate(-175 52.534)"
-      xlink:href="#a"
-    /></g
-  ><use transform="translate(350)" xlink:href="#b" />
+    <path d="M1260 0H0v630h1260z" fill="#0d3b99"/><path d="M1260 210H0v210h1260z" fill="#fff"/><path id="a" d="M630 280l20.572 63.315-53.859-39.131h66.573l-53.859 39.131z" fill="#0d3b99"/><g id="b"><use transform="translate(-175 -52.465)" xlink:href="#a"/><use transform="translate(-175 52.534)" xlink:href="#a"/></g><use transform="translate(350)" xlink:href="#b"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel = 'hn'
-@prop ...restProps
--->

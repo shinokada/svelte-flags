@@ -1,5 +1,5 @@
 <script>
-  import MyIcon from '$lib/MyIcon.svelte';
+  import MyIcon from 'path/to/MyIcon.svelte';
   import { Us, Ca } from 'svelte-flags';
 </script>
 

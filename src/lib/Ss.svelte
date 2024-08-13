@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
   import type { SVGAttributes } from 'svelte/elements';
 
@@ -16,19 +16,19 @@
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    title,
-    desc,
-    ariaLabel = 'ss',
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    title, 
+    desc, 
+    ariaLabel =  "ss" , 
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,27 +46,11 @@
   viewBox="0 0 20 10"
 >
   {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
+    <title id="{title.id}">{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
+    <desc id="{desc.id}">{desc.desc}</desc>
   {/if}
-  <path fill="#078930" d="M0 0h20v10H0z" /><path fill="#fff" d="M0 0h20v7H0z" /><path
-    d="M0 0h20v3H0z"
-  /><path fill="#da121a" d="M0 3.5h20v3H0z" /><path fill="#0f47af" d="M0 0l8.66 5L0 10z" /><path
-    d="M1.22 5l3.015.98-1.863-2.565v3.17L4.235 4.02z"
-    fill="#fcdd09"
-  />
+    <path fill="#078930" d="M0 0h20v10H0z"/><path fill="#fff" d="M0 0h20v7H0z"/><path d="M0 0h20v3H0z"/><path fill="#da121a" d="M0 3.5h20v3H0z"/><path fill="#0f47af" d="M0 0l8.66 5L0 10z"/><path d="M1.22 5l3.015.98-1.863-2.565v3.17L4.235 4.02z" fill="#fcdd09"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel = 'ss'
-@prop ...restProps
--->
