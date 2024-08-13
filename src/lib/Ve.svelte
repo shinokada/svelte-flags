@@ -54,3 +54,14 @@
     <defs><g id="d" transform="translate(0 -36)"><g id="c"><g id="b"><path d="M0-5v5h3z" fill="#fff" transform="rotate(18 0 -5)" id="a"/><use xlink:href="#a" transform="scale(-1 1)"/></g><use xlink:href="#b" transform="rotate(72)"/></g><use xlink:href="#b" transform="rotate(-72)"/><use xlink:href="#c" transform="rotate(144)"/></g></defs><path d="M0 0h180v120H0z" fill="#cf142b"/><path d="M0 0h180v80H0z" fill="#00247d"/><path d="M0 0h180v40H0z" fill="#fc0"/><g transform="translate(90 84)"><g id="f"><g id="e"><use xlink:href="#d" transform="rotate(10)"/><use xlink:href="#d" transform="rotate(30)"/></g><use xlink:href="#e" transform="rotate(40)"/></g><use xlink:href="#f" transform="rotate(-80)"/></g>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "ve"
+@prop ...restProps
+-->

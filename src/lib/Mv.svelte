@@ -54,3 +54,14 @@
     <path fill="#D21034" d="M0 0h720v480H0z"/><g fill="#007E3A"><path d="M120 120h480v240H120z"/><circle fill="#FFF" cx="390" cy="240" r="80"/><circle cx="420" cy="240" r="80"/></g>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "mv"
+@prop ...restProps
+-->

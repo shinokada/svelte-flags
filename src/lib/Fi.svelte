@@ -54,3 +54,14 @@
      <rect width="1800" height="1100" fill="#fff"/> <rect width="1800" height="300" y="400" fill="#003580"/> <rect width="300" height="1100" x="500" fill="#003580"/>  
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "fi"
+@prop ...restProps
+-->

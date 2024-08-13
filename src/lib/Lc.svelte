@@ -54,3 +54,14 @@
      <rect fill="#6Cf" width="600" height="300"/> <polygon fill="#FFF" points="200,274 300,260 400,274 300,27"/> <polygon points="213.5,274 300,260 386.5,274 300,60"/> <polygon fill="#FCD116" points="200,274 400,274 300,150"/>  
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "lc"
+@prop ...restProps
+-->

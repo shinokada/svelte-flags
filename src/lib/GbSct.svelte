@@ -54,3 +54,14 @@
     <defs><clipPath id="a"><path d="M0 0h5v3H0z"/></clipPath></defs><g clip-path="url(#a)"><rect width="100%" height="100%" fill="#005EB8"/><path d="M0 0l5 3M0 3L5 0" stroke="#fff" stroke-width="0.6"/></g>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "gb sct"
+@prop ...restProps
+-->

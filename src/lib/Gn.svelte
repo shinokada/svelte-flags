@@ -54,3 +54,14 @@
      <rect width="1" height="2" fill="#ce1126"/> <rect width="1" height="2" x="1" fill="#fcd116"/> <rect width="1" height="2" x="2" fill="#009460"/>  
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "gn"
+@prop ...restProps
+-->

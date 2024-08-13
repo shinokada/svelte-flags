@@ -54,3 +54,14 @@
     <path fill="#DA251d" d="M-20-15h40v30h-40z"/><g id="b" transform="translate(0 -6)"><path id="a" fill="#FF0" transform="rotate(18)" d="M0 0v6h4"/><use xlink:href="#a" transform="scale(-1 1)"/></g><g id="c" transform="rotate(72)"><use xlink:href="#b"/><use xlink:href="#b" transform="rotate(72)"/></g><use xlink:href="#c" transform="scale(-1 1)"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "vn"
+@prop ...restProps
+-->
