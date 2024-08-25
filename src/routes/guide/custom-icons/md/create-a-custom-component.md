@@ -4,7 +4,7 @@
     size: "40",
   };
   import { Icon } from 'svelte-flags';
-  export let icon: Component;
+  export let Icon: Component;
 </script>
 
 <Icon {...config} {icon} />
