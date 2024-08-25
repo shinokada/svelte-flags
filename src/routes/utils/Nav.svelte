@@ -184,7 +184,6 @@
   closeDrawer={closeNavDrawer}
   params={transitionParams}
   class="w-64 dark_bg_theme"
-  
 >
   <div class="flex items-center pb-4">
     <h5
