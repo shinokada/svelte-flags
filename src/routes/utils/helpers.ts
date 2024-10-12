@@ -1,6 +1,6 @@
 import type { Component } from 'svelte';
-import {type ListType, sidebarList } from 'runes-webkit';
-import { GridPlusOutline } from 'runes-webkit'
+import { type ListType, sidebarList } from 'runes-webkit';
+import { GridPlusOutline } from 'runes-webkit';
 
 const extra: ListType[] = [
   {

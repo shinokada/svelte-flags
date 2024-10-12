@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "ag" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'ag',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,20 @@
   viewBox="0 0 138 92"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path fill="#fff" d="M0 0h138v92H0z"/><path d="M0 0h138v46H0z"/><g transform="translate(69 36)"><g id="b"><path id="a" d="M-30 0L0-5.742V5.742z" fill="#fcd116"/><use xlink:href="#a" transform="rotate(22.5)"/><use xlink:href="#a" transform="rotate(45)"/></g><use xlink:href="#b" transform="rotate(67.5)"/><use xlink:href="#b" transform="rotate(135)"/></g><path fill="#0072c6" d="M0 36h138v20H0z"/><path d="M0 0v92h138V0L69 92z" fill="#ce1126"/>
+  <path fill="#fff" d="M0 0h138v92H0z" /><path d="M0 0h138v46H0z" /><g transform="translate(69 36)"
+    ><g id="b"
+      ><path id="a" d="M-30 0L0-5.742V5.742z" fill="#fcd116" /><use
+        xlink:href="#a"
+        transform="rotate(22.5)"
+      /><use xlink:href="#a" transform="rotate(45)" /></g
+    ><use xlink:href="#b" transform="rotate(67.5)" /><use
+      xlink:href="#b"
+      transform="rotate(135)"
+    /></g
+  ><path fill="#0072c6" d="M0 36h138v20H0z" /><path d="M0 0v92h138V0L69 92z" fill="#ce1126" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "ag"
-@prop ...restProps
--->

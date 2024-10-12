@@ -16,13 +16,25 @@
       alt="sponsor"
     /></a
   >
-  <a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow" target="_blank" aria-label="npm svelte-flags"
+  <a
+    href="https://www.npmjs.com/package/svelte-flags"
+    rel="nofollow"
+    target="_blank"
+    aria-label="npm svelte-flags"
     ><img src="https://img.shields.io/npm/v/svelte-flags/next" alt="npm" /></a
   >
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank" aria-label="MIT License"
+  <a
+    href="https://opensource.org/licenses/MIT"
+    rel="nofollow"
+    target="_blank"
+    aria-label="MIT License"
     ><img src="https://img.shields.io/github/license/shinokada/svelte-flags" alt="License" /></a
   >
-  <a href="https://www.npmjs.com/package/svelte-flags" rel="nofollow" target="_blank" aria-label="npm svelte-flags"
+  <a
+    href="https://www.npmjs.com/package/svelte-flags"
+    rel="nofollow"
+    target="_blank"
+    aria-label="npm svelte-flags"
     ><img src="https://img.shields.io/npm/dw/svelte-flags.svg" alt="npm" /></a
   >
 </div>

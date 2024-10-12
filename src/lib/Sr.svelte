@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "sr" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'sr',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,13 @@
   viewBox="0 0 900 600"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path fill="#007A33" d="M0 0h900v600H0z"/><path fill="#fff" d="M0 120h900v360H0z"/><path fill="#C8102E" d="M0 180h900v240H0z"/><path d="M450 191.459l70.534 217.082-184.661-134.164h228.254L379.466 408.541z" fill="#FFCD00"/>
+  <path fill="#007A33" d="M0 0h900v600H0z" /><path fill="#fff" d="M0 120h900v360H0z" /><path
+    fill="#C8102E"
+    d="M0 180h900v240H0z"
+  /><path d="M450 191.459l70.534 217.082-184.661-134.164h228.254L379.466 408.541z" fill="#FFCD00" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "sr"
-@prop ...restProps
--->

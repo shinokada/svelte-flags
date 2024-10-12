@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "gb sct" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'gb sct',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,16 @@
   viewBox="0 0 5 3"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <defs><clipPath id="a"><path d="M0 0h5v3H0z"/></clipPath></defs><g clip-path="url(#a)"><rect width="100%" height="100%" fill="#005EB8"/><path d="M0 0l5 3M0 3L5 0" stroke="#fff" stroke-width="0.6"/></g>
+  <defs><clipPath id="a"><path d="M0 0h5v3H0z" /></clipPath></defs><g clip-path="url(#a)"
+    ><rect width="100%" height="100%" fill="#005EB8" /><path
+      d="M0 0l5 3M0 3L5 0"
+      stroke="#fff"
+      stroke-width="0.6"
+    /></g
+  >
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "gb sct"
-@prop ...restProps
--->

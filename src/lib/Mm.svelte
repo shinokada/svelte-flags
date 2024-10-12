@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "mm" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'mm',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,17 @@
   viewBox="0 0 18 12"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <rect width="18" height="6" fill="#FECB00"/> <rect width="18" height="6" y="6" fill="#EA2839"/> <rect width="18" height="4" y="4" fill="#34B233"/> <g transform="translate(9,6.422)scale(4.422)"> <polygon id="pt" points="-0.3249196962329062,0 0,-1 0.3249196962329062,0" fill="#FFF"/> <use xlink:href="#pt" transform="rotate(-144)"/> <use xlink:href="#pt" transform="rotate(-72)"/> <use xlink:href="#pt" transform="rotate(72)"/> <use xlink:href="#pt" transform="rotate(144)"/> </g>  
+  <rect width="18" height="6" fill="#FECB00" /> <rect width="18" height="6" y="6" fill="#EA2839" />
+  <rect width="18" height="4" y="4" fill="#34B233" />
+  <g transform="translate(9,6.422)scale(4.422)">
+    <polygon id="pt" points="-0.3249196962329062,0 0,-1 0.3249196962329062,0" fill="#FFF" />
+    <use xlink:href="#pt" transform="rotate(-144)" />
+    <use xlink:href="#pt" transform="rotate(-72)" /> <use xlink:href="#pt" transform="rotate(72)" />
+    <use xlink:href="#pt" transform="rotate(144)" />
+  </g>
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "mm"
-@prop ...restProps
--->

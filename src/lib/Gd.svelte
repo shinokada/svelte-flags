@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "gd" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'gd',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,19 @@
   viewBox="0 0 500 300"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path fill="#ce1126" d="M0 0h500v300H0z"/><path fill="#007a5e" d="M42 42h416v216H42z"/><path d="M42 42h416L42 258h416z" fill="#fcd116"/><circle r="36" cy="150" cx="250" fill="#ce1126"/><path d="M67.749 150.41c4.504 8.39 13.265 17.52 20.916 20.73.123-8.52-2.9-19.44-7.034-28.14z" fill="#ce1126"/><path d="M60.112 121.63c6.529 13.61-16.933 46.08 22.156 53.69-4.822-6.58-7.931-17.44-6.755-26.16 8.201 3.12 16.83 12.25 20.317 19.23 10.23-37.15-26.24-34.89-35.718-46.76zM150 259.5l-11.462 35.276 30.008-21.802h-37.091l30.007 21.802zm100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm100 0l-11.462 35.276 30.008-21.802h-37.091l30.007 21.802zm0-258l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm-100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm-100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zM250 117l-19.397 59.697 50.782-36.895h-62.77l50.782 36.895z" fill="#fcd116"/>
+  <path fill="#ce1126" d="M0 0h500v300H0z" /><path fill="#007a5e" d="M42 42h416v216H42z" /><path
+    d="M42 42h416L42 258h416z"
+    fill="#fcd116"
+  /><circle r="36" cy="150" cx="250" fill="#ce1126" /><path
+    d="M67.749 150.41c4.504 8.39 13.265 17.52 20.916 20.73.123-8.52-2.9-19.44-7.034-28.14z"
+    fill="#ce1126"
+  /><path
+    d="M60.112 121.63c6.529 13.61-16.933 46.08 22.156 53.69-4.822-6.58-7.931-17.44-6.755-26.16 8.201 3.12 16.83 12.25 20.317 19.23 10.23-37.15-26.24-34.89-35.718-46.76zM150 259.5l-11.462 35.276 30.008-21.802h-37.091l30.007 21.802zm100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm100 0l-11.462 35.276 30.008-21.802h-37.091l30.007 21.802zm0-258l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm-100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zm-100 0l-11.462 35.276 30.007-21.802h-37.09l30.007 21.802zM250 117l-19.397 59.697 50.782-36.895h-62.77l50.782 36.895z"
+    fill="#fcd116"
+  />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flags.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "gd"
-@prop ...restProps
--->
