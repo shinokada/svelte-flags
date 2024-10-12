@@ -44,3 +44,15 @@
     d="M4.625 3.375L4 1.35l-.625 2.025L1.35 4l2.025.625L4 6.65l.625-2.025L6.65 4z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'aw'
+@prop ...restProps
+-->

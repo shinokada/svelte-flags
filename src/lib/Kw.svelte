@@ -36,3 +36,15 @@
   <rect width="12" height="2" fill="#007a3d" /> <rect width="12" height="2" y="2" fill="#fff" />
   <rect width="12" height="2" y="4" fill="#ce1126" /> <polygon points="0,0 3,2 3,4 0,6" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'kw'
+@prop ...restProps
+-->

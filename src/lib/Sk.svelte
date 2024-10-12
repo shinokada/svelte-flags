@@ -50,3 +50,15 @@
     fill="#0b4ea2"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'sk'
+@prop ...restProps
+-->

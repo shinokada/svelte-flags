@@ -51,3 +51,15 @@
   </g> <rect x="-225" y="-21.5" width="450" height="7.5" />
   <rect x="-225" y="86" width="450" height="100" fill="#339E35" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'mw'
+@prop ...restProps
+-->

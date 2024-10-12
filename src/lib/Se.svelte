@@ -36,3 +36,15 @@
   <rect width="16" height="10" fill="#006aa7" /> <rect width="2" height="10" x="5" fill="#fecc00" />
   <rect width="16" height="2" y="4" fill="#fecc00" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'se'
+@prop ...restProps
+-->

@@ -41,3 +41,15 @@
     d="M105 46L93 34h24zm-4 4L89 38v24zm4 4L93 66h24zm4-4l12-12v24z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'wf'
+@prop ...restProps
+-->

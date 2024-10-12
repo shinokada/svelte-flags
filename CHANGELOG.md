@@ -1,5 +1,11 @@
 # svelte-flags
 
+## 2.0.0-next.5
+
+### Patch Changes
+
+- types: create types.ts ([`b49b8d1bfa8b2f83785b4fc64db76ec966ce4d0b`](https://github.com/shinokada/svelte-flags/commit/b49b8d1bfa8b2f83785b4fc64db76ec966ce4d0b))
+
 ## 2.0.0-next.4
 
 ### Patch Changes

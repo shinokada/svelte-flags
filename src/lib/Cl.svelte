@@ -43,3 +43,15 @@
   </g> <use xlink:href="#t" transform="rotate(-72)" />
   <use xlink:href="#f" transform="rotate(144)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cl'
+@prop ...restProps
+-->

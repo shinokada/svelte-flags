@@ -83,3 +83,15 @@
     transform="matrix(-1.80698 2.86712 -3.00733 -1.72273 1749.003 -240.213)"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'ai'
+@prop ...restProps
+-->

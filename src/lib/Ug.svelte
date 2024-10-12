@@ -78,3 +78,15 @@
     /><path d="M417.669 245.944s12.34-2.979 13.83-2.553" stroke="#fff" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'ug'
+@prop ...restProps
+-->

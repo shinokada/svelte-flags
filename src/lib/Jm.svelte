@@ -38,3 +38,15 @@
     d="M0 0h12v6H0z"
   /><path fill="#2d2926" stroke="#ffb81c" clip-path="url(#a)" d="M-2-1v8l16-8v8z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'jm'
+@prop ...restProps
+-->

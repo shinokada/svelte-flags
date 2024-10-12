@@ -37,3 +37,15 @@
   <path id="yellow_area" d="M 0 2 L 2 0 h 1 v 2 z" fill="#FBDE4A" />
   <path id="red_area" d="M 3 0 v 2 h -2 z" fill="#DC241F" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cg'
+@prop ...restProps
+-->

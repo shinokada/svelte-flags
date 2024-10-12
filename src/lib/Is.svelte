@@ -39,3 +39,15 @@
     stroke="#FFF"
   /><path d="M0 9h25M9 0v18" stroke-width="2" stroke="#D50032" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'is'
+@prop ...restProps
+-->

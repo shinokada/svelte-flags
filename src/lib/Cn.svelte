@@ -44,3 +44,15 @@
     transform="rotate(69.945 .996 12.078)"
   /><use xlink:href="#a" transform="rotate(20.66 -19.689 31.932)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cn'
+@prop ...restProps
+-->

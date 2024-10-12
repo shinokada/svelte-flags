@@ -47,3 +47,15 @@
     ><use xlink:href="#b" /><path stroke="#fff" d="M0-23.5v3M0 17v3.5m0 3v3" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'kr'
+@prop ...restProps
+-->

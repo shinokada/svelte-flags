@@ -41,3 +41,15 @@
     paint-order="markers fill stroke"
   /><circle cy="150" cx="225" r="60" fill="#fff" stroke="#000095" stroke-width="7.5" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'tw'
+@prop ...restProps
+-->

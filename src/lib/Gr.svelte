@@ -40,3 +40,15 @@
     d="M5 0v11M0 5h10m0-2h17M10 7h17M0 11h27M0 15h27"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'gr'
+@prop ...restProps
+-->

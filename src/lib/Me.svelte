@@ -271,3 +271,15 @@
     <circle cy="201.75" cx="390.44" r=".8" fill="#D4AF3A" />
   </g> <use xlink:href="#a" transform="matrix(-1 0 0 1 639.97 0)" height="320" width="640" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'me'
+@prop ...restProps
+-->

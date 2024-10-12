@@ -38,3 +38,15 @@
     fill="#f7d618"
   /><path d="M800 0L0 480v120l800-480V0" fill="#ce1021" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cd'
+@prop ...restProps
+-->

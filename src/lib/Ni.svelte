@@ -400,3 +400,15 @@
     d="m500,224.874 -32.1418,55.6856 -32.8579,56.8991 64.2977,-0.007 65.7018,0.007 -32.153,-55.683 -32.847,-56.902zm0,3.00212 31.5491,54.652 30.8506,53.4278 -63.1018,-0.004 -61.7012,0.004 31.5597,-54.6448z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'ni'
+@prop ...restProps
+-->

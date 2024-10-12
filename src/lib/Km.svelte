@@ -45,3 +45,15 @@
   /> <use xlink:href="#star" y="32.2083" /> <use xlink:href="#star" y="64.4166" />
   <use xlink:href="#star" y="96.625" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'km'
+@prop ...restProps
+-->

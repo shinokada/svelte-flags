@@ -76,3 +76,15 @@
     </g> <use xlink:href="#oh" transform="matrix(1,0,0,-1,0,1000)" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'kz'
+@prop ...restProps
+-->

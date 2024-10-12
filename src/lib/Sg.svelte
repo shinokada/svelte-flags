@@ -52,3 +52,15 @@
   <use xlink:href="#star" transform="translate(107.99953,342.74883)" />
   <use xlink:href="#star" transform="translate(469.18853,342.74883)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'sg'
+@prop ...restProps
+-->

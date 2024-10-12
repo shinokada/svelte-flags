@@ -35,3 +35,15 @@
   {/if}
   <path fill="#006a4e" d="M0 0h20v12H0z" /><circle cx="9" cy="6" r="4" fill="#f42a41" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flags.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'bd'
+@prop ...restProps
+-->
