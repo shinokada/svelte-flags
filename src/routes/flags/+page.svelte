@@ -9,7 +9,7 @@
   minSize="24"
   defaultSize="30"
   maxSize="60"
-  div3Class="lg:grid-cols-3 md:grid-cols-2 "
+  div3Class="lg:grid-cols-3 md:grid-cols-2"
   icons={keyIcons}
   threeTabs={false}
   title="Icons - Svelte Flags"
