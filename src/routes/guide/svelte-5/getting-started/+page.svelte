@@ -1,17 +1,26 @@
 <script lang="ts">
   import { HighlightCompo, Code, H2 } from 'runes-webkit';
-  import { GitHubSponsor, type GitHubSponsorPropsType,  NpmVersion, type NpmVersionPropsType, License, type LicensePropsType, NpmDownload, type NpmDownloadPropsType } from 'svelte-shields';
+  import {
+    GitHubSponsor,
+    type GitHubSponsorPropsType,
+    NpmVersion,
+    type NpmVersionPropsType,
+    License,
+    type LicensePropsType,
+    NpmDownload,
+    type NpmDownloadPropsType
+  } from 'svelte-shields';
 
   const sponsor: GitHubSponsorPropsType = {
     user: 'shinokada',
-    logo:'github',
+    logo: 'github',
     color: 'red',
     link: ['https://github.com/sponsors/shinokada', 'https://github.com/sponsors/shinokada']
   };
   const npmversion: NpmVersionPropsType = {
     packageName: 'svelte-flags',
     color: 'red',
-    logo:'svelte',
+    logo: 'svelte',
     link: [
       'https://www.npmjs.com/package/svelte-flags',
       'https://www.npmjs.com/package/svelte-flags?activeTab=versions'
@@ -49,17 +58,29 @@
 
 <H2>Requirements</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/requirement.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/requirement.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/installation.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Basic Usage</H2>
 
 <p>In a svelte file:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/basic-usage.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>IDE support</H2>
 
@@ -76,16 +97,28 @@
   compilation.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/faster-compiling.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/faster-compiling.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/passing-down-other-attributes.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Import all</H2>
 
 <p>Use `import * as Icon from 'svelte-flags`.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/import-all.md'] as string}
+  clipboardClass="top-2"
+/>

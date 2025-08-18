@@ -40,11 +40,19 @@
 
 <H3>Tailwind CSS</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-css.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/tailwind-css.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H3>Bootstrap</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/bootstrap.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>A11y</H2>
 
@@ -90,4 +98,8 @@
     onclick={() => alert('hello')}
   />
 </CodeWrapper>
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/passing-down-other-attributes.md'] as string}
+  clipboardClass="top-2"
+/>

@@ -1,6 +1,6 @@
-- size = ctx.size || '24' 
-- role = ctx.role || 'img' 
-- title = {} 
-- desc = {} 
-- ariaLabel =  <icon file name>  
+- size = ctx.size || '24'
+- role = ctx.role || 'img'
+- title = {}
+- desc = {}
+- ariaLabel = <icon file name>
 - ...restProps (class, id, name, role, and all other props from SVGAttributes )

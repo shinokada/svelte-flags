@@ -31,11 +31,19 @@
 
 <H3>Tailwind CSS</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-css.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/tailwind-css.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H3>Bootstrap</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/bootstrap.md'] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>A11y</H2>
 
@@ -59,4 +67,8 @@
 
 <p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules['./md/passing-down-other-attributes.md'] as string}
+  clipboardClass="top-2"
+/>
