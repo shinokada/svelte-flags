@@ -26,7 +26,7 @@
 <HighlightCompo
   codeLang="ts"
   code={modules['./md/setting-preferences.md'] as string}
-  clipboardClass="top-2"
+  
 />
 
 <p>
