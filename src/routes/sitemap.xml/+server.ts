@@ -38,7 +38,7 @@ const pages: Page[] = [
     changefreq: 'weekly',
     priority: '0.5'
   },
-   {
+  {
     loc: 'guide/svelte-5/props',
     changefreq: 'weekly',
     priority: '0.5'

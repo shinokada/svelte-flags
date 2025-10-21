@@ -23,11 +23,7 @@
   icon preferences as follows:
 </p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules['./md/setting-preferences.md'] as string}
-  
-/>
+<HighlightCompo codeLang="ts" code={modules['./md/setting-preferences.md'] as string} />
 
 <p>
   All the <Code>props</Code> are optional, allowing you to fine-tune the appearance and accessibility

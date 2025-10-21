@@ -1,7 +1,7 @@
 {
   "name": "svelte-flags",
-  "version": "2.0.2",
-  "description": "250+ country flag icon components for Svelte",
+  "version": "3.0.0",
+  "description": "Country flag icon components for Svelte",
   "license": "MIT",
   "homepage": "https://svelte-flags.codewithshin.com/",
   "author": {
@@ -112,6 +112,11 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
     },
     "./Ad.svelte": {
       "types": "./dist/Ad.svelte.d.ts",
