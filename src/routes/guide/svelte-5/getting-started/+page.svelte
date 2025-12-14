@@ -38,7 +38,7 @@
   };
   const downloads: NpmDownloadPropsType = {
     packageName: 'svelte-flags',
-    link: ['https://www.npmjs.com/package/svelte-flags']
+    link: ['https://www.npmjs.com/package/svelte-flags', 'https://svelte-flags.codewithshin.com/']
   };
 
   const modules = import.meta.glob('./md/*.md', {
